@@ -48,6 +48,8 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel> : Fragment
         super.onViewCreated(view, savedInstanceState)
 
         initialize(savedInstanceState)
+
+        initNavigation()
     }
 
     private fun initNavigation() {
@@ -73,18 +75,18 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel> : Fragment
     }
 
     protected fun navigateWithId(destination: Int, bundle: Bundle? = null) {
-        if (findNavController().currentDestination?.id != destination) {
+        if (navController.currentDestination?.id != destination) {
             popBackStack()
-            findNavController().navigate(destination, bundle, navOptions)
+            navController.navigate(destination, bundle, navOptions)
         }
     }
 
     protected fun popBackStack() {
-        findNavController().popBackStack()
+        navController.popBackStack()
     }
 
-    protected fun navigateBack() {
-        findNavController().navigateUp()
+    protected fun navigateUp() {
+        navController.navigateUp()
     }
 
     override fun onDestroyView() {

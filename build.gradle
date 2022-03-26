@@ -87,7 +87,7 @@ buildscript {
                         'kapt': "androidx.room:room-compiler:$versions.ext.room"
                 ],
 
-                'datastore': "androidx.datastore:datastore:$versions.ext.datastore"
+                'datastore': "androidx.datastore:datastore-preferences:$versions.ext.datastore"
         ]
 
 
