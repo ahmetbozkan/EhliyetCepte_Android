@@ -74,6 +74,9 @@ dependencies {
     // glide
     implementation deps.glide
 
+    // gson
+    implementation deps.gson
+
     implementation deps.kotlin.ktx
     implementation deps.androidx.appcompat
     implementation deps.material

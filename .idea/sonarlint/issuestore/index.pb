@@ -7,8 +7,6 @@ t
 Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/di/RepositoryBinds.kt,a/4/a4b68e18764bd71dc7b86cfec2a10c4be513cf92
 t
 Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/di/SingletonModule.kt,0/a/0a72298a6a831076f254aa99784d1f669f0824de
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 „
 Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/DataStoreExtensions.kt,f/8/f8e233f30e038f35b13dfd65f2d528e7903676e3
 
@@ -19,3 +17,18 @@ s
 Capp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseFragment.kt,8/a/8a0a7f517b7528e18ba323c3c088186e606aa5cb
 ž
 napp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/preferences/PreferencesManagerRepositoryImpl.kt,7/3/734fa9779317c54aef59f91ecf4ad552d10c6038
+q
+Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+n
+>app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
+}
+Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingViewModel.kt,8/0/807ba4a03bbb40d98e2d7f4ef4eb69495112155f
+O
+.idea/dictionaries/altamira.xml,3/e/3eaa8c99dbf8159e6aa78071716c16838852d19c
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+|
+Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingFragment.kt,8/1/810f74af8fc66cf3a2a508e7d68f488f57ff4293

@@ -39,7 +39,8 @@ buildscript {
                         'room'             : '2.4.2',
                         'datastore'        : '1.0.0',
                         'glide'            : '4.12.0',
-                        'dexter_permission': '6.2.3'
+                        'dexter_permission': '6.2.3',
+                        'gson'             : '2.9.0'
                 ]
         ]
 
@@ -82,12 +83,14 @@ buildscript {
                 'dexter_permission': "com.karumi:dexter:$versions.ext.dexter_permission",
 
                 'room'             : [
-                        'ktx': "androidx.room:room-runtime:$versions.ext.room",
+                        'ktx'    : "androidx.room:room-runtime:$versions.ext.room",
                         'runtime': "androidx.room:room-runtime:$versions.ext.room",
-                        'kapt': "androidx.room:room-compiler:$versions.ext.room"
+                        'kapt'   : "androidx.room:room-compiler:$versions.ext.room"
                 ],
 
-                'datastore': "androidx.datastore:datastore-preferences:$versions.ext.datastore"
+                'datastore'        : "androidx.datastore:datastore-preferences:$versions.ext.datastore",
+
+                'gson'             : "com.google.code.gson:gson:$versions.ext.gson"
         ]
 
 
