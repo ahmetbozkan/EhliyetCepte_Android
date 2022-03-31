@@ -15,6 +15,6 @@ class LandingFragment: BaseFragment<FragmentLandingBinding, LandingViewModel>() 
     override val viewModel: LandingViewModel by viewModels()
 
     override fun initialize(savedInstanceState: Bundle?) {
-        TODO("Not yet implemented")
+        // todo: "Not yet implemented"
     }
 }

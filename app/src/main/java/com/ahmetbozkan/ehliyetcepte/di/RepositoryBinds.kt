@@ -1,5 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte.di
 
+import com.ahmetbozkan.ehliyetcepte.data.repository.exam.ExamRepository
+import com.ahmetbozkan.ehliyetcepte.data.repository.exam.ExamRepositoryImpl
 import com.ahmetbozkan.ehliyetcepte.data.repository.preferences.PreferencesManagerRepository
 import com.ahmetbozkan.ehliyetcepte.data.repository.preferences.PreferencesManagerRepositoryImpl
 import dagger.Binds
@@ -15,5 +17,9 @@ abstract class RepositoryBinds {
     @Binds
     @ViewModelScoped
     abstract fun bindPreferencesManagerRepository(repositoryImpl: PreferencesManagerRepositoryImpl): PreferencesManagerRepository
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindExamRepository(repositoryImpl: ExamRepositoryImpl): ExamRepository
 
 }

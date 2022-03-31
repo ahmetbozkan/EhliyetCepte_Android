@@ -83,7 +83,7 @@ buildscript {
                 'dexter_permission': "com.karumi:dexter:$versions.ext.dexter_permission",
 
                 'room'             : [
-                        'ktx'    : "androidx.room:room-runtime:$versions.ext.room",
+                        'ktx'    : "androidx.room:room-ktx:$versions.ext.room",
                         'runtime': "androidx.room:room-runtime:$versions.ext.room",
                         'kapt'   : "androidx.room:room-compiler:$versions.ext.room"
                 ],

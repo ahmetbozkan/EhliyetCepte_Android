@@ -3,10 +3,6 @@
 Xapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/preferences/PreferencesManager.kt,0/a/0ab650cee78ea7b1ec1c5be14e63cfc855e91b63
 ˆ
 Xapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/preferences/UserPreferences.kt,f/7/f70df06b94f20bf7f3615ca7c3b05206f61b148b
-t
-Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/di/RepositoryBinds.kt,a/4/a4b68e18764bd71dc7b86cfec2a10c4be513cf92
-t
-Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/di/SingletonModule.kt,0/a/0a72298a6a831076f254aa99784d1f669f0824de
 „
 Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/DataStoreExtensions.kt,f/8/f8e233f30e038f35b13dfd65f2d528e7903676e3
 
@@ -21,8 +17,6 @@ q
 Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-n
->app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
 }
 Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingViewModel.kt,8/0/807ba4a03bbb40d98e2d7f4ef4eb69495112155f
 O
@@ -30,5 +24,5 @@ O
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-|
-Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingFragment.kt,8/1/810f74af8fc66cf3a2a508e7d68f488f57ff4293
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
