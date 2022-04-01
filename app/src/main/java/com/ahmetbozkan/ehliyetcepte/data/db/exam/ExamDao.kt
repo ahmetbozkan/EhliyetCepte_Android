@@ -2,9 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.db.exam
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestionsAndAnswers
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.*
 
 @Dao
 interface ExamDao {

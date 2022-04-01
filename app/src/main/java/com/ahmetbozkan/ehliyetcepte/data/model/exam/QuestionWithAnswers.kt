@@ -8,14 +8,14 @@ import androidx.room.Relation
 data class QuestionWithAnswers(
     @Embedded val question: Question,
     @Relation(
-        parentColumn = "question_id",
-        entityColumn = "answer_id",
+        parentColumn = "questionId",
+        entityColumn = "answerId",
         associateBy = Junction(QuestionAnswerCrossRef::class)
     )
     val answers: List<Answer>
 )
 
-@Entity(primaryKeys = ["question_id", "answer_id"])
+@Entity(primaryKeys = ["questionId", "answerId"])
 data class QuestionAnswerCrossRef(
     val questionId: Long,
     val answerId: Long
