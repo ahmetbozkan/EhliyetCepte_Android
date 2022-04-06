@@ -4,23 +4,23 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Answer
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
-import com.ahmetbozkan.ehliyetcepte.data.util.ExamConverters
+import com.ahmetbozkan.ehliyetcepte.data.util.AnswerConverters
 import com.ahmetbozkan.ehliyetcepte.di.ApplicationScope
-import com.ahmetbozkan.ehliyetcepte.domain.exam.ParseExamsFileUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.exam.GetParsedExamListUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.exam.GetParsedQuestionListUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Provider
 
 @Database(
-    entities = [Exam::class, Question::class, Answer::class],
+    entities = [Exam::class, Question::class],
     version = 1,
     exportSchema = false
 )
-@TypeConverters(ExamConverters::class)
+@TypeConverters(value = [AnswerConverters::class])
 abstract class ExamDatabase : RoomDatabase() {
 
     abstract fun examDao(): ExamDao
@@ -28,19 +28,22 @@ abstract class ExamDatabase : RoomDatabase() {
     class Callback @Inject constructor(
         private val database: Provider<ExamDatabase>,
         @ApplicationScope private val applicationScope: CoroutineScope,
-        private val useCase: ParseExamsFileUseCase
+        private val getExamListUseCase: GetParsedExamListUseCase,
+        private val getQuestionListUseCase: GetParsedQuestionListUseCase
     ) : RoomDatabase.Callback() {
 
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
 
             val dao = database.get().examDao()
-            val exams: List<Exam> = useCase.exams
+
+            val exams: List<Exam> = getExamListUseCase.exams
+            val question: List<Question> = getQuestionListUseCase.questions
 
             applicationScope.launch {
                 dao.insert(*exams.toTypedArray())
+                dao.insert(*question.toTypedArray())
             }
         }
-
     }
 }

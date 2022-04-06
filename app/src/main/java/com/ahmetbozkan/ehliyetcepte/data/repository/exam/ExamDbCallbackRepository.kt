@@ -1,12 +1,17 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.exam
 
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 
 interface ExamDbCallbackRepository {
 
     /**
-     * parse exams.json file to list of Exam objects to insert database in callback
-     * @return list of exam objects
+     * get Exams as entity classes from parsed ExamHolder list to insert Room db
      */
-    fun parseExamFile(): List<Exam>
+    fun getExamEntities(): List<Exam>
+
+    /**
+     * get Exams as entity classes from parsed ExamHolder list to insert Room db
+     */
+    fun getQuestionEntities(): List<Question>
 }

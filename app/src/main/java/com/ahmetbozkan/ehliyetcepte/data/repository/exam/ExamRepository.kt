@@ -3,7 +3,7 @@ package com.ahmetbozkan.ehliyetcepte.data.repository.exam
 import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestionsAndAnswers
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
 
 interface ExamRepository {
 
@@ -12,7 +12,7 @@ interface ExamRepository {
      * @param category of the Exams
      * @return list of Exams as LiveData
      */
-    fun getExamsWithCategory(category: ExamCategories): LiveData<List<ExamWithQuestionsAndAnswers>>
+    fun getExamsWithCategory(category: ExamCategories): List<ExamWithQuestions>
 
     /**
      * get exam count in the Exams database

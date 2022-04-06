@@ -8,5 +8,10 @@ enum class ExamCategories(val value: Int) {
     ENGINE(5),
     FIRST_AID(6),
     TRAFFIC_MANNERS(7),
-    NOTHING(0)
+    NOTHING(0);
+
+    companion object {
+        private val VALUES = values()
+        fun getByValue(value: Int) = VALUES.firstOrNull { it.value == value } ?: NOTHING
+    }
 }

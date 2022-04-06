@@ -1,11 +1,8 @@
 package com.ahmetbozkan.ehliyetcepte
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import com.ahmetbozkan.ehliyetcepte.base.BaseViewModel
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestionsAndAnswers
 import com.ahmetbozkan.ehliyetcepte.domain.exam.GetExamCountUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.exam.GetExamsWithCategoryUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -75,9 +75,8 @@
     ]
   },
   {
-    "id": 2,
     "name": "Ehliyet Deneme Sınavı 2",
-    "category": 1,
+    "category": 3,
     "questions": [
       {
         "question": "Test Soru 1",
