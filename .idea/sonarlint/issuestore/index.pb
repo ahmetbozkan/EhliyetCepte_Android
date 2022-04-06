@@ -13,12 +13,8 @@ s
 Capp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseFragment.kt,8/a/8a0a7f517b7528e18ba323c3c088186e606aa5cb
 ž
 napp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/preferences/PreferencesManagerRepositoryImpl.kt,7/3/734fa9779317c54aef59f91ecf4ad552d10c6038
-q
-Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-}
-Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingViewModel.kt,8/0/807ba4a03bbb40d98e2d7f4ef4eb69495112155f
 O
 .idea/dictionaries/altamira.xml,3/e/3eaa8c99dbf8159e6aa78071716c16838852d19c
 :

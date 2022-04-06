@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/ahmet/AndroidStudioProjects/EhliyetCepte/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2065972222222222" />
+        <entry key="app/src/main/res/layout/fragment_exam_list.xml" value="0.2065972222222222" />
         <entry key="app/src/main/res/layout/fragment_landing.xml" value="0.134979248046875" />
+        <entry key="app/src/main/res/layout/row_exam_item.xml" value="0.2065972222222222" />
       </map>
     </option>
   </component>
