@@ -9,5 +9,18 @@
         android:id="@+id/landingFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.landing.LandingFragment"
         android:label="fragment_landing"
-        tools:layout="@layout/fragment_landing" />
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment_to_examListFragment"
+            app:destination="@id/examListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examListFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.examlist.ExamListFragment"
+        android:label="fragment_exam_list"
+        tools:layout="@layout/fragment_exam_list" >
+        <argument
+            android:name="category"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories" />
+    </fragment>
 </navigation>

@@ -31,15 +31,10 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding, MainViewModel>() {
 
     private fun observeLiveData() {
         viewModel.examCount.observe(this, ::observeExamCount)
-        viewModel.getExams(ExamCategories.PILOT).observe(this, ::observeExams)
     }
 
     private fun observeExamCount(count: Int) {
         showToast(count.toString())
-    }
-
-    private fun observeExams(exams: List<ExamWithQuestions>) {
-        showToast(exams.size.toString())
     }
 
     private fun initNavigation() {

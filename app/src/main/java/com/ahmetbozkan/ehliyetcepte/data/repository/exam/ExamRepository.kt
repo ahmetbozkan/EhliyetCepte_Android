@@ -12,7 +12,7 @@ interface ExamRepository {
      * @param category of the Exams
      * @return list of Exams as LiveData
      */
-    fun getExamsWithCategory(category: ExamCategories): List<ExamWithQuestions>
+    fun getExamsWithCategory(category: ExamCategories): List<Exam>
 
     /**
      * get exam count in the Exams database
