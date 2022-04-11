@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val getExamCountUseCase: GetExamCountUseCase
+    getExamCountUseCase: GetExamCountUseCase
 ) : BaseViewModel() {
 
     val examCount = getExamCountUseCase.invoke()
