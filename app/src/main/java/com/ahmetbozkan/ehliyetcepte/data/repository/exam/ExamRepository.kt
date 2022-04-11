@@ -10,9 +10,16 @@ interface ExamRepository {
     /**
      * get all the exams with the given category from Exams database
      * @param category of the Exams
-     * @return list of Exams as LiveData
+     * @return list of Exams
      */
-    fun getExamsWithCategory(category: ExamCategories): List<Exam>
+    suspend fun getExams(category: ExamCategories): List<Exam>
+
+    /**
+     * get all the exams & questions of that exam with given examId
+     * @param examId: id of Exam
+     * @return ExamWithQuestion object
+     */
+    suspend fun getExamWithQuestions(examId: Long): ExamWithQuestions
 
     /**
      * get exam count in the Exams database

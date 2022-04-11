@@ -22,5 +22,17 @@
         <argument
             android:name="category"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories" />
+        <action
+            android:id="@+id/action_examListFragment_to_solveExamFragment"
+            app:destination="@id/solveExamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/solveExamFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.solve.SolveExamFragment"
+        android:label="fragment_solve_exam"
+        tools:layout="@layout/fragment_solve_exam" >
+        <argument
+            android:name="exam"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam" />
     </fragment>
 </navigation>

@@ -9,5 +9,5 @@ data class ExamWithQuestions(
         parentColumn = "exam_id",
         entityColumn = "parent_exam_id"
     )
-    val answers: List<Question>
+    val questions: List<Question>
 )

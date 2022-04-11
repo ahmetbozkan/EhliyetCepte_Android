@@ -4,11 +4,11 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.repository.exam.ExamRepository
 import javax.inject.Inject
 
-class GetExamsWithCategoryUseCase @Inject constructor(
+class GetExamsUseCase @Inject constructor(
     private val repository: ExamRepository
 ) {
 
-    operator fun invoke(category: ExamCategories) =
-        repository.getExamsWithCategory(category)
+    suspend operator fun invoke(category: ExamCategories) =
+        repository.getExams(category)
 
 }

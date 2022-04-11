@@ -44,6 +44,13 @@ class ExamListFragment : BaseFragment<FragmentExamListBinding, ExamListViewModel
             setHasFixedSize(true)
             adapter = examListAdapter
         }
+
+        examListAdapter.click = object : (Exam) -> Unit {
+            override fun invoke(exam: Exam) {
+                val action = ExamListFragmentDirections.actionExamListFragmentToSolveExamFragment(exam)
+                navigate(action)
+            }
+        }
     }
 
     private fun observeLiveData() {

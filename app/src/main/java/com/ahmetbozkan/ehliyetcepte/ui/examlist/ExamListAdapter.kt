@@ -14,12 +14,14 @@ import javax.inject.Inject
 class ExamListAdapter @Inject constructor() :
     ListAdapter<Exam, ExamListAdapter.ExamListViewHolder>(diffUtil) {
 
-    class ExamListViewHolder(private val binding: RowExamItemBinding) :
+    class ExamListViewHolder(val binding: RowExamItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(exam: Exam) {
             binding.exam = exam
         }
     }
+
+    var click: ((Exam) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExamListViewHolder =
         ExamListViewHolder(
@@ -33,8 +35,13 @@ class ExamListAdapter @Inject constructor() :
 
     override fun onBindViewHolder(holder: ExamListViewHolder, position: Int) {
         val currentItem = getItem(position)
-
         holder.bind(currentItem)
+
+        holder.binding.apply {
+            cardViewExamContainer.setOnClickListener {
+                click?.invoke(currentItem)
+            }
+        }
     }
 
     companion object {
