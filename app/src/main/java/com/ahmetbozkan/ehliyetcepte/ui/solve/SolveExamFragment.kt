@@ -35,13 +35,32 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
 
     private fun observeLiveData() {
         viewModel.exam.observe(viewLifecycleOwner, ::observeExamWithQuestions)
+        viewModel.currentQuestion.observe(viewLifecycleOwner, ::observeCurrentQuestion)
     }
 
     private fun observeExamWithQuestions(exam: ExamWithQuestions) {
         questions = exam.questions
         currentQuestion = questions[0]
 
-        binding.question = currentQuestion
+        binding.apply {
+            this.exam = exam.exam
+        }
+    }
+
+    private fun observeCurrentQuestion(question: Question) {
+        val options = question.answers
+
+        binding.apply {
+            tvQuestion.text = question.question
+            rbuttonOption1.text =
+                getString(R.string.question_option_format, options[0].option, options[0].optionFull)
+            rbuttonOption2.text =
+                getString(R.string.question_option_format, options[1].option, options[1].optionFull)
+            rbuttonOption3.text =
+                getString(R.string.question_option_format, options[2].option, options[2].optionFull)
+            rbuttonOption4.text =
+                getString(R.string.question_option_format, options[3].option, options[3].optionFull)
+        }
     }
 
 }

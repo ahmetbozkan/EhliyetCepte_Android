@@ -37,6 +37,8 @@ class ExamListFragment : BaseFragment<FragmentExamListBinding, ExamListViewModel
 
     private fun getArgs() {
         selectedCategory = args.category
+
+        viewModel.getExams(selectedCategory)
     }
 
     private fun initRecyclerView() {
@@ -47,14 +49,15 @@ class ExamListFragment : BaseFragment<FragmentExamListBinding, ExamListViewModel
 
         examListAdapter.click = object : (Exam) -> Unit {
             override fun invoke(exam: Exam) {
-                val action = ExamListFragmentDirections.actionExamListFragmentToSolveExamFragment(exam)
+                val action =
+                    ExamListFragmentDirections.actionExamListFragmentToSolveExamFragment(exam)
                 navigate(action)
             }
         }
     }
 
     private fun observeLiveData() {
-        viewModel.getExams(selectedCategory).observe(viewLifecycleOwner, ::observeExams)
+        viewModel.exams.observe(viewLifecycleOwner, ::observeExams)
     }
 
     private fun observeExams(exams: List<Exam>?) {
