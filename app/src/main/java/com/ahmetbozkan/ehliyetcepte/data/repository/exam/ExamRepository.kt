@@ -1,6 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.exam
 
 import androidx.lifecycle.LiveData
+import com.ahmetbozkan.ehliyetcepte.core.Resource
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
@@ -12,14 +13,14 @@ interface ExamRepository {
      * @param category of the Exams
      * @return list of Exams
      */
-    suspend fun getExams(category: ExamCategories): List<Exam>
+    suspend fun getExams(category: ExamCategories): Resource<List<Exam>>
 
     /**
      * get all the exams & questions of that exam with given examId
      * @param examId: id of Exam
      * @return ExamWithQuestion object
      */
-    suspend fun getExamWithQuestions(examId: Long): ExamWithQuestions
+    suspend fun getExamWithQuestions(examId: Long): Resource<ExamWithQuestions>
 
     /**
      * get exam count in the Exams database
