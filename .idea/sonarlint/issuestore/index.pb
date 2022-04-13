@@ -20,8 +20,6 @@ O
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-y
-Iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Options.kt,4/d/4d7939e7a6f045b93e6d0fd0b2407fa76511de7d
 x
 Happ/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Answer.kt,d/9/d9292f0b8a3a4723592fb178d98a7841ac6ed283
 |
