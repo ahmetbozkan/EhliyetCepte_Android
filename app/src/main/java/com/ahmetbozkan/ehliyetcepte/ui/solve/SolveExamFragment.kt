@@ -8,11 +8,9 @@ import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Answer
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
-import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import com.ahmetbozkan.ehliyetcepte.util.extension.visible
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,43 +34,6 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
         val exam = args.exam
 
         viewModel.getExamWithQuestions(exam.examId)
-    }
-
-    private fun manageClick() {
-        binding.apply {
-            btnPreviousQuestion.setOnClickListener {
-                viewModel.onPreviousQuestionClicked()
-            }
-
-            btnNextQuestion.setOnClickListener {
-                viewModel.onNextQuestionClicked()
-            }
-
-            rgroupOptions.setOnCheckedChangeListener { _, id ->
-                val selectedOption = when (id) {
-                    R.id.rbutton_option1 -> Options.A
-                    R.id.rbutton_option2 -> Options.B
-                    R.id.rbutton_option3 -> Options.C
-                    R.id.rbutton_option4 -> Options.D
-                    else -> Options.NONE
-                }
-
-                val isSelectedOptionSame = isSameOptionSelected(selectedOption)
-
-                if (isSelectedOptionSame) {
-                    rgroupOptions.clearCheck()
-                }
-                viewModel.onOptionSelected(selectedOption, isSelectedOptionSame)
-            }
-        }
-    }
-
-    private fun isSameOptionSelected(selectedOption: Options?): Boolean {
-        val currentQuestionId = viewModel.currentQuestion.value?.questionId.orZero()
-
-        val currentSelectedOptions = viewModel.selectedOptions[currentQuestionId]
-
-        return currentSelectedOptions == selectedOption
     }
 
     private fun observeLiveData() {
@@ -101,13 +62,13 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
                 getString(R.string.question_option_format, options[3].option, options[3].optionFull)
 
             val currentSelectedOption = viewModel.selectedOptions[question.questionId]
-            rgroupOptions.clearCheck()
 
             if (currentSelectedOption != null) {
                 rgroupOptions.findViewWithTag<AppCompatRadioButton>(
                     currentSelectedOption.name
                 ).isChecked = true
-            }
+            } else
+                rgroupOptions.clearCheck()
 
             if (viewModel.index == 0)
                 btnPreviousQuestion.invisible()
@@ -118,6 +79,34 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
                 btnNextQuestion.invisible()
             else
                 btnNextQuestion.visible()
+        }
+    }
+
+    private fun manageClick() {
+        binding.apply {
+            btnPreviousQuestion.setOnClickListener {
+                viewModel.onPreviousQuestionClicked()
+            }
+
+            btnNextQuestion.setOnClickListener {
+                viewModel.onNextQuestionClicked()
+            }
+
+            rbuttonOption1.setOnClickListener {
+
+            }
+
+            rbuttonOption2.setOnClickListener {
+
+            }
+
+            rbuttonOption3.setOnClickListener {
+
+            }
+
+            rbuttonOption4.setOnClickListener {
+
+            }
         }
     }
 

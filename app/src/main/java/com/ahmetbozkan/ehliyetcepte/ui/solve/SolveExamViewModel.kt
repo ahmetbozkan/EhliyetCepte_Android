@@ -63,13 +63,8 @@ class SolveExamViewModel @Inject constructor(
         _currentQuestion.postValue(examWithQuestions.questions[index])
     }
 
-    fun onOptionSelected(selectedOption: Options, isSelectedOptionSame: Boolean) {
+    fun onOptionSelected() {
         val currentQuestionId = currentQuestion.value?.questionId
-
-        if (isSelectedOptionSame)
-            _selectedOptions.remove(currentQuestionId.orZero())
-        else
-            _selectedOptions[currentQuestionId.orZero()] = selectedOption
     }
 
 }
