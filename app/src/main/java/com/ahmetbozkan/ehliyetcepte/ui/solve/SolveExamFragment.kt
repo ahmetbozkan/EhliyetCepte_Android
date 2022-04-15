@@ -8,9 +8,11 @@ import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Answer
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
+import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import com.ahmetbozkan.ehliyetcepte.util.extension.visible
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -93,21 +95,34 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             }
 
             rbuttonOption1.setOnClickListener {
-
+                manageOptionSelection(Options.A)
             }
 
             rbuttonOption2.setOnClickListener {
-
+                manageOptionSelection(Options.B)
             }
 
             rbuttonOption3.setOnClickListener {
-
+                manageOptionSelection(Options.C)
             }
 
             rbuttonOption4.setOnClickListener {
-
+                manageOptionSelection(Options.D)
             }
         }
+    }
+
+    private fun manageOptionSelection(selectedOption: Options) {
+        val currentQuestionId = viewModel.currentQuestion.value?.questionId
+
+        val currentSelectedOption = viewModel.selectedOptions[currentQuestionId.orZero()]
+
+        if (currentSelectedOption != null && currentSelectedOption == selectedOption) {
+            viewModel.onOptionSelected(selectedOption, true)
+            binding.rgroupOptions.clearCheck()
+        } else
+            viewModel.onOptionSelected(selectedOption, false)
+
     }
 
 }
