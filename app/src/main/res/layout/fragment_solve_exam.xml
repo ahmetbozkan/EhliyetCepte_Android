@@ -56,24 +56,28 @@
                 android:id="@+id/rbutton_option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:tag="A"
                 tools:text="A) Option 1" />
 
             <RadioButton
                 android:id="@+id/rbutton_option2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:tag="B"
                 tools:text="B) Option 1" />
 
             <RadioButton
                 android:id="@+id/rbutton_option3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:tag="C"
                 tools:text="C) Option 1" />
 
             <RadioButton
                 android:id="@+id/rbutton_option4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:tag="D"
                 tools:text="D) Option 1" />
         </RadioGroup>
 
@@ -91,10 +95,10 @@
             android:id="@+id/btn_end_exam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="End Exam"
             app:layout_constraintEnd_toStartOf="@id/btn_next_question"
             app:layout_constraintStart_toEndOf="@id/btn_previous_question"
-            app:layout_constraintTop_toTopOf="@id/btn_previous_question"
-            tools:text="End Exam" />
+            app:layout_constraintTop_toTopOf="@id/btn_previous_question" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btn_next_question"
