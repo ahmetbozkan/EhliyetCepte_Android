@@ -7,7 +7,7 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseViewModel
 import com.ahmetbozkan.ehliyetcepte.core.Status
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetExamsUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetExamsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

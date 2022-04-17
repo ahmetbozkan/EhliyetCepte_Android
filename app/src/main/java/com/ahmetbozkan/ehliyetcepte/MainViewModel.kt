@@ -1,7 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte
 
 import com.ahmetbozkan.ehliyetcepte.base.BaseViewModel
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetExamCountUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetExamCountUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

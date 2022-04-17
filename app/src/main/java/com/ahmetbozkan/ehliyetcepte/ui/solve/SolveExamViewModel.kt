@@ -8,7 +8,7 @@ import com.ahmetbozkan.ehliyetcepte.core.Status
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetExamWithQuestionsUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetExamWithQuestionsUseCase
 import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

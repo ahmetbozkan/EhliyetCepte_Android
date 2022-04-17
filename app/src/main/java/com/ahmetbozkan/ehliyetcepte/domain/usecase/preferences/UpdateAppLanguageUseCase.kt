@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.domain.preferences
+package com.ahmetbozkan.ehliyetcepte.domain.usecase.preferences
 
 import com.ahmetbozkan.ehliyetcepte.data.repository.preferences.PreferencesManagerRepository
 import javax.inject.Inject

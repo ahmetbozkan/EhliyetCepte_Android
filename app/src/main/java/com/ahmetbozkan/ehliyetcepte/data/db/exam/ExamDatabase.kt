@@ -8,8 +8,8 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.data.util.AnswerConverters
 import com.ahmetbozkan.ehliyetcepte.di.ApplicationScope
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetParsedExamListUseCase
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetParsedQuestionListUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetParsedExamListUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetParsedQuestionListUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
