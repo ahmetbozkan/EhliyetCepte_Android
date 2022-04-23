@@ -21,4 +21,8 @@ class ExamRepositoryImpl @Inject constructor(
     override fun getExamCount(): LiveData<Int> =
         dataSource.getExamCount()
 
+    override suspend fun update(exam: Exam) {
+        dataSource.update(exam)
+    }
+
 }

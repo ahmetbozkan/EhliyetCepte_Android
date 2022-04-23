@@ -29,4 +29,9 @@ interface ExamRepository {
      */
     fun getExamCount(): LiveData<Int>
 
+    /**
+     * update exam in the db
+     */
+    suspend fun update(exam: Exam)
+
 }

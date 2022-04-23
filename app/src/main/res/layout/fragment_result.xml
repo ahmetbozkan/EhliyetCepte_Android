@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.result.ResultFragment">
 
     <data>
 
+        <variable
+            name="result"
+            type="com.ahmetbozkan.ehliyetcepte.data.model.result.Result" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@{`correct:` +  result.correct}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="correct: " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@{`wrong:` +  result.wrong}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_correct"
+            tools:text="wrong: " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@{`score:` +  result.score}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_wrong"
+            tools:text="score: " />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

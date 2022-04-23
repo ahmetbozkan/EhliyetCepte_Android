@@ -54,7 +54,7 @@
         tools:layout="@layout/fragment_result" >
         <argument
             android:name="result"
-            app:argType="com.ahmetbozkan.ehliyetcepte.ui.result.ResultModel" />
+            app:argType="com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity" />
     </fragment>
     <action android:id="@+id/action_global_multiSelectionDialogFragment" app:destination="@id/multiSelectionDialogFragment" />
 </navigation>
