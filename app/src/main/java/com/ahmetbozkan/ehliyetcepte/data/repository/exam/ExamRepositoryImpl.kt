@@ -6,6 +6,7 @@ import com.ahmetbozkan.ehliyetcepte.data.datasource.ExamDataSource
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import javax.inject.Inject
 
 class ExamRepositoryImpl @Inject constructor(
@@ -23,6 +24,10 @@ class ExamRepositoryImpl @Inject constructor(
 
     override suspend fun update(exam: Exam) {
         dataSource.update(exam)
+    }
+
+    override suspend fun update(question: Question) {
+        dataSource.update(question)
     }
 
 }

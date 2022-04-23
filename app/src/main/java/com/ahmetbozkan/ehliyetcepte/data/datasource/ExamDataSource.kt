@@ -4,6 +4,7 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseDataSource
 import com.ahmetbozkan.ehliyetcepte.data.db.exam.ExamDao
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import javax.inject.Inject
 
 class ExamDataSource @Inject constructor(
@@ -24,6 +25,10 @@ class ExamDataSource @Inject constructor(
 
     suspend fun update(exam: Exam) {
         dao.update(exam)
+    }
+
+    suspend fun update(question: Question) {
+        dao.update(question)
     }
 
 }

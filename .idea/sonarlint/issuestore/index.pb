@@ -74,8 +74,6 @@ Zapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/bindingadapters/ViewBinding
 Oapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/examlist/ExamListViewModel.kt,3/e/3ebbb99044ae50f91e69bfc2b8ece6ad33486870
 ‰
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/MultiSelectionDialogViewModel.kt,9/c/9c9b6ef26df7666f55e1c67ac27594047e298a14
-}
-Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/SolveExamViewModel.kt,e/c/ec43f0686396a4605556a6b1a756b43f7d30f323
 ‘
 aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/exam/GetExamWithQuestionsUseCase.kt,5/d/5db51b68fa56404ecd5e57a42c17c06eac937c93
 …

@@ -9,6 +9,7 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetExamWithQuestionsUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.UpdateQuestionUseCase
 import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +18,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SolveExamViewModel @Inject constructor(
-    private val getExamWithQuestionsUseCase: GetExamWithQuestionsUseCase
+    private val getExamWithQuestionsUseCase: GetExamWithQuestionsUseCase,
+    private val updateQuestionUseCase: UpdateQuestionUseCase
 ) : BaseViewModel() {
 
     private lateinit var _examWithQuestions: ExamWithQuestions
@@ -70,6 +72,18 @@ class SolveExamViewModel @Inject constructor(
             _selectedOptions.remove(currentQuestionId)
         else
             _selectedOptions[currentQuestionId] = selectedOption
+
+        updateQuestion(selectedOption)
     }
+
+    private fun updateQuestion(selectedOption: Options) =
+        viewModelScope.launch(Dispatchers.IO + genericExceptionHandler) {
+            val currentQuestion = currentQuestion.value
+
+            currentQuestion?.let { question ->
+                val updatedQuestion = question.copy(selectedOption = selectedOption)
+                updateQuestionUseCase.invoke(updatedQuestion)
+            }
+        }
 
 }

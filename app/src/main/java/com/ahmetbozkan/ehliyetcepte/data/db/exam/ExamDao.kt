@@ -44,6 +44,9 @@ interface ExamDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(question: Question)
 
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun update(question: Question)
+
     /**
      * RESULT
      */

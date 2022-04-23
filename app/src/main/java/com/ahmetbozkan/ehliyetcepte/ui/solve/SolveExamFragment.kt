@@ -125,7 +125,7 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
         val currentSelectedOption = viewModel.selectedOptions[currentQuestionId]
 
         if (currentSelectedOption != null && currentSelectedOption == selectedOption) {
-            viewModel.onOptionSelected(selectedOption, isSelectedOptionSame = true)
+            viewModel.onOptionSelected(Options.NONE, isSelectedOptionSame = true)
             binding.rgroupOptions.clearCheck()
         } else
             viewModel.onOptionSelected(selectedOption, isSelectedOptionSame = false)
@@ -155,7 +155,7 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
     }
 
     private fun setDialogResult() {
-        setFragmentResultListener(MultiSelectionDialogModel.SINGLE_BUTTON_DIALOG_RETURN_KEY) { requestKey, bundle ->
+        setFragmentResultListener(MultiSelectionDialogModel.SINGLE_BUTTON_DIALOG_RETURN_KEY) { _, bundle ->
             val selection = bundle.getSerializable(
                 MultiSelectionDialogModel.SINGLE_BUTTON_DIALOG_BUTTON_ACTION_KEY
             ) as MultiSelectionType
