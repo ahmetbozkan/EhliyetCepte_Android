@@ -168,7 +168,11 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
 
     private fun navigateToResultFragment() {
         val action = SolveExamFragmentDirections.actionSolveExamFragmentToResultFragment(
-            SolvedExamEntity(viewModel.selectedOptions, viewModel.examWithQuestions)
+            SolvedExamEntity(
+                examId = viewModel.examWithQuestions.exam.examId,
+                answers = viewModel.selectedOptions,
+                examWithQuestions = viewModel.examWithQuestions
+            )
         )
 
         navigate(action)

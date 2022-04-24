@@ -56,14 +56,59 @@
             app:layout_constraintTop_toBottomOf="@id/tv_wrong"
             tools:text="score: " />
 
+        <LinearLayout
+            android:id="@+id/rcv_result_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/teal_200"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_score">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_question_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="No" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_selected_option"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="SEÇENEK" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_correct_option"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="D. CEVAP" />
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_score" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_result_toolbar"
+            tools:listitem="@layout/row_result_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

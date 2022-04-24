@@ -7,6 +7,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class SolvedExamEntity(
+    val examId: Long,
     val answers: Map<Long, Options>,
     val examWithQuestions: ExamWithQuestions
 ) : Parcelable

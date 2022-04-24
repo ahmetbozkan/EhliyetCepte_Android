@@ -8,6 +8,7 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentResultBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
@@ -18,9 +19,14 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
 
     private val args: ResultFragmentArgs by navArgs()
 
+    @Inject
+    lateinit var resultAdapter: ResultAdapter
+
     override fun initialize(savedInstanceState: Bundle?) {
 
         getArgs()
+
+        initRecyclerView()
 
         observeLiveData()
 
@@ -29,7 +35,13 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
     private fun getArgs() {
         val result = args.result
 
+        onExamFinished(result)
+    }
+
+    private fun onExamFinished(result: SolvedExamEntity) {
         viewModel.onExamFinished(result)
+
+        resultAdapter.submitList(result.examWithQuestions.questions)
     }
 
     private fun observeLiveData() {
@@ -38,5 +50,12 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
 
     private fun observeCalculatedResult(result: Result) {
         binding.result = result
+    }
+
+    private fun initRecyclerView() {
+        binding.rcvResult.apply {
+            setHasFixedSize(true)
+            adapter = resultAdapter
+        }
     }
 }

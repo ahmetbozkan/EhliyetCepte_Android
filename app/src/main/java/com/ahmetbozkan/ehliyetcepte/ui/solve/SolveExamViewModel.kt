@@ -79,10 +79,17 @@ class SolveExamViewModel @Inject constructor(
     private fun updateQuestion(selectedOption: Options) =
         viewModelScope.launch(Dispatchers.IO + genericExceptionHandler) {
             val currentQuestion = currentQuestion.value
+            val questions = examWithQuestions.questions
 
             currentQuestion?.let { question ->
                 val updatedQuestion = question.copy(selectedOption = selectedOption)
                 updateQuestionUseCase.invoke(updatedQuestion)
+
+                // find question in the questions list and change its selected option
+                // in order to use it in results page
+                questions.find { it.questionId == question.questionId }?.let {
+                    it.selectedOption = selectedOption
+                }
             }
         }
 
