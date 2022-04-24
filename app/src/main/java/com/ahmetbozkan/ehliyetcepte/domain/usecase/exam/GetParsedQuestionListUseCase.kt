@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.domain.exam
+package com.ahmetbozkan.ehliyetcepte.domain.usecase.exam
 
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.data.repository.exam.ExamDbCallbackRepository

@@ -6,17 +6,18 @@ import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
+import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 import com.ahmetbozkan.ehliyetcepte.data.util.AnswerConverters
 import com.ahmetbozkan.ehliyetcepte.di.ApplicationScope
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetParsedExamListUseCase
-import com.ahmetbozkan.ehliyetcepte.domain.exam.GetParsedQuestionListUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetParsedExamListUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.GetParsedQuestionListUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Provider
 
 @Database(
-    entities = [Exam::class, Question::class],
+    entities = [Exam::class, Question::class, Result::class],
     version = 1,
     exportSchema = false
 )

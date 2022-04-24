@@ -34,5 +34,27 @@
         <argument
             android:name="exam"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam" />
+        <action
+            android:id="@+id/action_solveExamFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/multiSelectionDialogFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogFragment"
+        android:label="dialog_fragment_multi_selection"
+        tools:layout="@layout/dialog_fragment_multi_selection" >
+        <argument
+            android:name="model"
+            app:argType="com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel" />
+    </dialog>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="result"
+            app:argType="com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity" />
+    </fragment>
+    <action android:id="@+id/action_global_multiSelectionDialogFragment" app:destination="@id/multiSelectionDialogFragment" />
 </navigation>

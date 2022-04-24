@@ -5,6 +5,7 @@ import com.ahmetbozkan.ehliyetcepte.core.Resource
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 
 interface ExamRepository {
 
@@ -29,4 +30,13 @@ interface ExamRepository {
      */
     fun getExamCount(): LiveData<Int>
 
+    /**
+     * update exam in the db
+     */
+    suspend fun update(exam: Exam)
+
+    /**
+     * update question in the db
+     */
+    suspend fun update(question: Question)
 }

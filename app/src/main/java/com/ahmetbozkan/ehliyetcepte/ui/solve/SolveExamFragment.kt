@@ -2,6 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.ui.solve
 
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatRadioButton
+import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.ahmetbozkan.ehliyetcepte.R
@@ -11,6 +12,9 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
+import com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel
+import com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionType
+import com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
 import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import com.ahmetbozkan.ehliyetcepte.util.extension.visible
@@ -109,20 +113,69 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             rbuttonOption4.setOnClickListener {
                 manageOptionSelection(Options.D)
             }
+
+            btnEndExam.setOnClickListener {
+                onEndExamClicked()
+            }
         }
     }
 
     private fun manageOptionSelection(selectedOption: Options) {
-        val currentQuestionId = viewModel.currentQuestion.value?.questionId
-
-        val currentSelectedOption = viewModel.selectedOptions[currentQuestionId.orZero()]
+        val currentQuestionId = viewModel.currentQuestion.value?.questionId.orZero()
+        val currentSelectedOption = viewModel.selectedOptions[currentQuestionId]
 
         if (currentSelectedOption != null && currentSelectedOption == selectedOption) {
-            viewModel.onOptionSelected(selectedOption, true)
+            viewModel.onOptionSelected(Options.NONE, isSelectedOptionSame = true)
             binding.rgroupOptions.clearCheck()
         } else
-            viewModel.onOptionSelected(selectedOption, false)
+            viewModel.onOptionSelected(selectedOption, isSelectedOptionSame = false)
+    }
 
+    private fun onEndExamClicked() {
+        val action = SolveExamFragmentDirections.actionGlobalMultiSelectionDialogFragment(
+            MultiSelectionDialogModel(
+                title = "Sınavı bitirmek istediğinizden emin misiniz?",
+                description = "Daha sonra sınava geri dönemeyeceksiniz!",
+                rightButtonText = "BİTİR",
+                rightButtonBgColor = R.color.teal_700,
+                rightButtonTextColor = R.color.white,
+                rightButtonStrokeColor = R.color.black,
+                leftButtonText = "İPTAL",
+                leftButtonTextColor = R.color.white,
+                leftButtonBgColor = R.color.teal_200,
+                leftButtonStrokeColor = R.color.black,
+                iconRes = R.drawable.ic_info,
+                iconTint = R.color.orange_warning
+            )
+        )
+
+        setDialogResult()
+
+        navigate(action)
+    }
+
+    private fun setDialogResult() {
+        setFragmentResultListener(MultiSelectionDialogModel.SINGLE_BUTTON_DIALOG_RETURN_KEY) { _, bundle ->
+            val selection = bundle.getSerializable(
+                MultiSelectionDialogModel.SINGLE_BUTTON_DIALOG_BUTTON_ACTION_KEY
+            ) as MultiSelectionType
+
+            if (selection == MultiSelectionType.SELECTION_RIGHT) {
+                navigateToResultFragment()
+            }
+        }
+    }
+
+    private fun navigateToResultFragment() {
+        val action = SolveExamFragmentDirections.actionSolveExamFragmentToResultFragment(
+            SolvedExamEntity(
+                examId = viewModel.examWithQuestions.exam.examId,
+                answers = viewModel.selectedOptions,
+                examWithQuestions = viewModel.examWithQuestions
+            )
+        )
+
+        navigate(action)
     }
 
 }
