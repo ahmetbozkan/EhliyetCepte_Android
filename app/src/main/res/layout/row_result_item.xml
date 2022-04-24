@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="question"
+            type="com.ahmetbozkan.ehliyetcepte.data.model.exam.Question" />
     </data>
 
     <LinearLayout
@@ -29,6 +31,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:textColor="@color/black"
+            android:text="@{question.selectedOption.name()}"
             android:layout_weight="1"
             tools:text="C"/>
 
@@ -37,6 +40,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="@{question.correctOption.name()}"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:layout_weight="1"

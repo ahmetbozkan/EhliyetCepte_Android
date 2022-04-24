@@ -33,15 +33,12 @@ class ResultAdapter @Inject constructor() :
 
         holder.binding.apply {
             tvQuestionNo.text = "${position + 1}."
-            tvSelectedOption.text = currentItem.selectedOption.name
-            tvCorrectOption.text = currentItem.correctOption.name
+            question = currentItem
 
-            llRoot.background = if (currentItem.selectedOption != currentItem.correctOption) {
+            llRoot.background = if (currentItem.selectedOption != currentItem.correctOption)
                 ContextCompat.getDrawable(llRoot.context, R.color.orange_warning)
-            }
-            else {
+            else
                 ContextCompat.getDrawable(llRoot.context, R.color.teal_200)
-            }
         }
     }
 

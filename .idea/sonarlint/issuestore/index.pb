@@ -114,3 +114,13 @@ Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamReposit
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepositoryImpl.kt,f/9/f9f6732e33055dd05e2ee39b83c90251255e72da
 Ž
 ^app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/result/ExamWithQuestionsAndResult.kt,4/6/463ce393369b35b8eed6f5c59b559186081b8cf2
+v
+Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Exam.kt,4/3/431a3eff088b0c8aaef973be169a625fa558a30b
+ƒ
+Sapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamWithQuestions.kt,7/d/7d532afa53074fc461ee2efa6bcdaf98c18f055c
+z
+Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/result/Result.kt,4/6/462fa2e3a786a179a01d2129a026cc5390671cf2
+z
+Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Question.kt,e/0/e0169187c18cccdb789957f4d29e66fc60de4548
+|
+Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/SolvedExamEntity.kt,2/2/2290fad0ee01847e99e05da3ca2541a4ab71123f
