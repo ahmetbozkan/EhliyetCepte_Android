@@ -35,6 +35,17 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Exam Name" />
 
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_exam_name"
+            app:layout_constraintStart_toStartOf="@id/tv_exam_name"
+            app:layout_constraintTop_toTopOf="@id/tv_exam_name" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_question"
             android:layout_width="match_parent"

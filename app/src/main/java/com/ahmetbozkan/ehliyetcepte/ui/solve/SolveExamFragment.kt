@@ -1,6 +1,8 @@
 package com.ahmetbozkan.ehliyetcepte.ui.solve
 
 import android.os.Bundle
+import android.os.SystemClock
+import android.widget.Chronometer
 import androidx.appcompat.widget.AppCompatRadioButton
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
@@ -28,12 +30,25 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
 
     private val args: SolveExamFragmentArgs by navArgs()
 
+    private lateinit var chronometer: Chronometer
+    private var pauseOffset: Long = 0
+    private var running = false
+
     override fun initialize(savedInstanceState: Bundle?) {
+
+        init()
+
         setExam()
 
         manageClick()
 
         observeLiveData()
+    }
+
+    private fun init() {
+        chronometer = binding.chronometer
+
+        startTimer()
     }
 
     private fun setExam() {
@@ -151,6 +166,7 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
 
         setDialogResult()
 
+        pauseTimer()
         navigate(action)
     }
 
@@ -163,10 +179,14 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             if (selection == MultiSelectionType.SELECTION_RIGHT) {
                 navigateToResultFragment()
             }
+
+            startTimer()
         }
     }
 
     private fun navigateToResultFragment() {
+        setExamDuration()
+
         val action = SolveExamFragmentDirections.actionSolveExamFragmentToResultFragment(
             SolvedExamEntity(
                 examId = viewModel.examWithQuestions.exam.examId,
@@ -176,6 +196,33 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
         )
 
         navigate(action)
+    }
+
+    private fun setExamDuration() {
+        val duration = SystemClock.elapsedRealtime() - binding.chronometer.base
+        viewModel.examWithQuestions.exam.duration = duration
+    }
+
+    private fun startTimer() {
+        if (running)
+            return
+
+        binding.chronometer.apply {
+            base = SystemClock.elapsedRealtime() - pauseOffset
+            start()
+            running = true
+        }
+    }
+
+    private fun pauseTimer() {
+        if (!running)
+            return
+
+        binding.chronometer.apply {
+            chronometer.stop()
+            pauseOffset = SystemClock.elapsedRealtime() - this.base
+            running = false
+        }
     }
 
 }

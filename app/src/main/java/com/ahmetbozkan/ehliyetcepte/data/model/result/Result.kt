@@ -12,4 +12,5 @@ data class Result(
     @ColumnInfo(name = "correct") val correct: Int,
     @ColumnInfo(name = "wrong") val wrong: Int,
     @ColumnInfo(name = "score") val score: Int,
+    @ColumnInfo(name = "duration") val duration: String
 )

@@ -16,6 +16,19 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@{`duration:` +  result.duration}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="duration: " />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +38,7 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_duration"
             tools:text="correct: " />
 
         <androidx.appcompat.widget.AppCompatTextView

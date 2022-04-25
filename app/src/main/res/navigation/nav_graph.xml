@@ -36,7 +36,8 @@
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam" />
         <action
             android:id="@+id/action_solveExamFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/examListFragment" />
     </fragment>
     <dialog
         android:id="@+id/multiSelectionDialogFragment"
