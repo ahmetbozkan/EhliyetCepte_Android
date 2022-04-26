@@ -17,7 +17,7 @@ data class QuestionHolder(
     @SerializedName("correct_option") val correctOption: String,
     val answers: List<AnswerHolder>
 ) {
-    fun toEntityModel(examId: Long): Question {
+    fun toEntityModel(examId: Long, index: Int): Question {
         val answers = mutableListOf<Answer>()
 
         this.answers.forEach { answer ->
@@ -29,7 +29,8 @@ data class QuestionHolder(
             question = question,
             imageUrl = imageUrl,
             correctOption = Options.valueOf(correctOption),
-            answers = answers
+            answers = answers,
+            index = index
         )
     }
 }

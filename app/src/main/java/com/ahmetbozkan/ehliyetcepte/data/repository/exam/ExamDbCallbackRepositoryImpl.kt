@@ -13,14 +13,13 @@ import javax.inject.Inject
 
 class ExamDbCallbackRepositoryImpl @Inject constructor(
     @ApplicationContext private val context: Context
-): ExamDbCallbackRepository {
+) : ExamDbCallbackRepository {
 
     override fun getExamEntities(): List<Exam> {
         val exams = parseExamFile()
 
-        val examEntityList = mutableListOf<Exam>()
-        exams.forEach { exam ->
-            examEntityList.add(exam.toEntityModel())
+        val examEntityList = exams.map { exam ->
+            exam.toEntityModel()
         }
 
         return examEntityList
@@ -30,11 +29,12 @@ class ExamDbCallbackRepositoryImpl @Inject constructor(
         val exams = parseExamFile()
 
         val questions = mutableListOf<Question>()
-        exams.forEachIndexed { index, exam ->
-            exam.questions.forEach { question ->
+        exams.forEachIndexed { examIndex, exam ->
+            exam.questions.forEachIndexed { questionIndex, question ->
                 questions.add(
                     question.toEntityModel(
-                        examId =(index + 1).toLong()
+                        examId = (examIndex + 1).toLong(),
+                        index = questionIndex + 1
                     )
                 )
             }

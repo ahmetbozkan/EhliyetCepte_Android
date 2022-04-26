@@ -18,6 +18,8 @@ class ResultAdapter @Inject constructor() :
     class ResultViewHolder(val binding: RowResultItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
+    var click: ((Question) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResultViewHolder =
         ResultViewHolder(
             DataBindingUtil.inflate(
@@ -39,6 +41,10 @@ class ResultAdapter @Inject constructor() :
                 ContextCompat.getDrawable(llRoot.context, R.color.orange_warning)
             else
                 ContextCompat.getDrawable(llRoot.context, R.color.teal_200)
+
+            tvDisplayQuestion.setOnClickListener {
+                click?.invoke(currentItem)
+            }
         }
     }
 

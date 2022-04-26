@@ -16,5 +16,6 @@ data class Question(
     @ColumnInfo(name = "image_url") val imageUrl: String,
     @ColumnInfo(name = "correct_option") val correctOption: Options,
     @ColumnInfo(name = "selected_option") var selectedOption: Options = Options.NONE,
+    @ColumnInfo(name = "index") val index: Int,
     @ColumnInfo(name = "answers") val answers: List<Answer>
 ) : Parcelable

@@ -5,6 +5,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentResultBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +23,8 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
     @Inject
     lateinit var resultAdapter: ResultAdapter
 
+    private lateinit var solvedExam: SolvedExamEntity
+
     override fun initialize(savedInstanceState: Bundle?) {
 
         getArgs()
@@ -33,9 +36,9 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
     }
 
     private fun getArgs() {
-        val result = args.result
+        solvedExam = args.result
 
-        onExamFinished(result)
+        onExamFinished(solvedExam)
     }
 
     private fun onExamFinished(result: SolvedExamEntity) {
@@ -56,6 +59,18 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
         binding.rcvResult.apply {
             setHasFixedSize(true)
             adapter = resultAdapter
+        }
+
+        resultAdapter.click = object : (Question) -> Unit {
+            override fun invoke(question: Question) {
+                val action = ResultFragmentDirections
+                    .actionResultFragmentToDisplayQuestionResultFragment(
+                        question, solvedExam.examWithQuestions.exam.name
+                    )
+
+                navigate(action)
+            }
+
         }
     }
 }

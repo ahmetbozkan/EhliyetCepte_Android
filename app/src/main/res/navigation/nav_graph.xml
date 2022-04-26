@@ -56,6 +56,21 @@
         <argument
             android:name="result"
             app:argType="com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity" />
+        <action
+            android:id="@+id/action_resultFragment_to_displayQuestionResultFragment"
+            app:destination="@id/displayQuestionResultFragment" />
     </fragment>
     <action android:id="@+id/action_global_multiSelectionDialogFragment" app:destination="@id/multiSelectionDialogFragment" />
+    <fragment
+        android:id="@+id/displayQuestionResultFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.result.displayquestion.DisplayQuestionResultFragment"
+        android:label="fragment_display_question_result"
+        tools:layout="@layout/fragment_display_question_result" >
+        <argument
+            android:name="question"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.Question" />
+        <argument
+            android:name="examName"
+            app:argType="string" />
+    </fragment>
 </navigation>
