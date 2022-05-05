@@ -5,7 +5,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentResultBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -61,11 +60,11 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
             adapter = resultAdapter
         }
 
-        resultAdapter.click = object : (Question) -> Unit {
-            override fun invoke(question: Question) {
+        resultAdapter.click = object : (Int) -> Unit {
+            override fun invoke(position: Int) {
                 val action = ResultFragmentDirections
                     .actionResultFragmentToDisplayQuestionResultFragment(
-                        question, solvedExam.examWithQuestions.exam.name
+                        position, solvedExam.examWithQuestions
                     )
 
                 navigate(action)

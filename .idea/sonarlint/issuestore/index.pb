@@ -36,8 +36,6 @@ Kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/exam/ExamDatabase.kt,7/
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 t
 Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseViewModel.kt,1/9/19c14db806d44f08fba0235898f29578e6174fb0
-o
-?app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainViewModel.kt,c/a/ca389c67796a15cd16a49d079a1a3c1da53d0585
 …
 Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepository.kt,0/d/0d97bbde7270f930a3af40c5b46267363f78bffd
 y
@@ -50,8 +48,6 @@ Qapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/StringExtensions.
 Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/NullCheckExtensions.kt,a/1/a1f91c9814102b5beeddd97a1d8774c6e8424baa
 ƒ
 Sapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamWithQuestions.kt,7/d/7d532afa53074fc461ee2efa6bcdaf98c18f055c
-}
-Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/SolveExamViewModel.kt,e/c/ec43f0686396a4605556a6b1a756b43f7d30f323
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/SolvedExamEntity.kt,2/2/2290fad0ee01847e99e05da3ca2541a4ab71123f
 p
@@ -74,3 +70,19 @@ q
 Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
 ‚
 Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ContextExtensions.kt,8/0/8012c75326244380ec8780458e4e23b809700950
+’
+bapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/exam/GetParsedQuestionListUseCase.kt,9/d/9d97959bd487f87737384b35719c84169a938613
+|
+Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamHolder.kt,8/5/85752649b5a8564ac161c64b11599130e2a2bb02
+v
+Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Exam.kt,4/3/431a3eff088b0c8aaef973be169a625fa558a30b
+~
+Napp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/examlist/ExamListFragment.kt,9/0/9067e8d2036782525fe9d6ef51d9e675dfcbb582
+“
+capp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamDbCallbackRepositoryImpl.kt,8/f/8fb754f3ce6d1de2ac9dd7a0ffd724edd3f9f8f4
+o
+?app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainViewModel.kt,c/a/ca389c67796a15cd16a49d079a1a3c1da53d0585
+n
+>app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
+z
+Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Question.kt,e/0/e0169187c18cccdb789957f4d29e66fc60de4548

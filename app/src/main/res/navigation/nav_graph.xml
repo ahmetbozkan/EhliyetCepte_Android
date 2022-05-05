@@ -67,10 +67,10 @@
         android:label="fragment_display_question_result"
         tools:layout="@layout/fragment_display_question_result" >
         <argument
-            android:name="question"
-            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.Question" />
+            android:name="questionPosition"
+            app:argType="integer" />
         <argument
-            android:name="examName"
-            app:argType="string" />
+            android:name="examWithQuestions"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions" />
     </fragment>
 </navigation>

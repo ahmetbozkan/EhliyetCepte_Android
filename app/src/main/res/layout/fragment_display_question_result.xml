@@ -44,7 +44,7 @@
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@id/tv_question">
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/rbutton_option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                 android:tag="A"
                 tools:text="A) Option 1" />
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/rbutton_option2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 android:tag="B"
                 tools:text="B) Option 1" />
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/rbutton_option3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
                 android:tag="C"
                 tools:text="C) Option 1" />
 
-            <RadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/rbutton_option4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,6 +76,26 @@
                 android:tag="D"
                 tools:text="D) Option 1" />
         </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_previous_question"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgroup_options"
+            app:tint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_next_question"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_arrow_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgroup_options"
+            app:tint="@color/black" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

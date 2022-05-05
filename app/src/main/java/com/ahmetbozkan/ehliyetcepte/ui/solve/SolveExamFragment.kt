@@ -35,7 +35,6 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
     private var running = false
 
     override fun initialize(savedInstanceState: Bundle?) {
-
         init()
 
         setExam()
