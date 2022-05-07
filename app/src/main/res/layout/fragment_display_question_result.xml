@@ -2,17 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.solve.SolveExamFragment">
+    tools:context=".ui.result.displayquestion.DisplayQuestionResultFragment">
 
     <data>
 
-        <variable
-            name="exam"
-            type="com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam" />
-
-        <variable
-            name="question"
-            type="com.ahmetbozkan.ehliyetcepte.data.model.exam.Question" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,7 +19,6 @@
             android:background="@color/teal_200"
             android:gravity="center"
             android:padding="4dp"
-            android:text="@{exam.name}"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -34,17 +26,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Exam Name" />
-
-        <Chronometer
-            android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_exam_name"
-            app:layout_constraintStart_toStartOf="@id/tv_exam_name"
-            app:layout_constraintTop_toTopOf="@id/tv_exam_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_question"
@@ -67,6 +48,7 @@
                 android:id="@+id/rbutton_option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="A"
                 tools:text="A) Option 1" />
 
@@ -74,6 +56,7 @@
                 android:id="@+id/rbutton_option2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="B"
                 tools:text="B) Option 1" />
 
@@ -81,6 +64,7 @@
                 android:id="@+id/rbutton_option3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="C"
                 tools:text="C) Option 1" />
 
@@ -88,6 +72,7 @@
                 android:id="@+id/rbutton_option4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="D"
                 tools:text="D) Option 1" />
         </RadioGroup>
@@ -102,15 +87,6 @@
             app:layout_constraintTop_toBottomOf="@id/rgroup_options"
             app:tint="@color/black" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_end_exam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="End Exam"
-            app:layout_constraintEnd_toStartOf="@id/btn_next_question"
-            app:layout_constraintStart_toEndOf="@id/btn_previous_question"
-            app:layout_constraintTop_toTopOf="@id/btn_previous_question" />
-
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btn_next_question"
             android:layout_width="50dp"
@@ -120,6 +96,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rgroup_options"
             app:tint="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_question_navigator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/btn_next_question"
+            tools:listitem="@layout/row_question_navigator_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

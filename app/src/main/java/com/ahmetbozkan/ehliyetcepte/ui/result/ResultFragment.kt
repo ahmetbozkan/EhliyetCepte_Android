@@ -22,6 +22,8 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
     @Inject
     lateinit var resultAdapter: ResultAdapter
 
+    private lateinit var solvedExam: SolvedExamEntity
+
     override fun initialize(savedInstanceState: Bundle?) {
 
         getArgs()
@@ -33,9 +35,9 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
     }
 
     private fun getArgs() {
-        val result = args.result
+        solvedExam = args.result
 
-        onExamFinished(result)
+        onExamFinished(solvedExam)
     }
 
     private fun onExamFinished(result: SolvedExamEntity) {
@@ -56,6 +58,18 @@ class ResultFragment : BaseFragment<FragmentResultBinding, ResultViewModel>() {
         binding.rcvResult.apply {
             setHasFixedSize(true)
             adapter = resultAdapter
+        }
+
+        resultAdapter.click = object : (Int) -> Unit {
+            override fun invoke(position: Int) {
+                val action = ResultFragmentDirections
+                    .actionResultFragmentToDisplayQuestionResultFragment(
+                        position, solvedExam.examWithQuestions
+                    )
+
+                navigate(action)
+            }
+
         }
     }
 }

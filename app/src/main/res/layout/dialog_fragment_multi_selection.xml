@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.common.MultiSelectionDialogFragment">
+    tools:context=".ui.common.multiselectiondialog.MultiSelectionDialogFragment">
 
     <data>
 
         <variable
             name="model"
-            type="com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel" />
+            type="com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel" />
 
     </data>
 

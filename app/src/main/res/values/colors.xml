@@ -10,5 +10,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="orange_warning">#DC6904</color>
+    <color name="red_error">#FF9494</color>
 
 </resources>

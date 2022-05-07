@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="0dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textStyle="bold"
+            tools:text="1" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

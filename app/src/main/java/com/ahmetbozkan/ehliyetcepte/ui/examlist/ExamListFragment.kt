@@ -49,8 +49,15 @@ class ExamListFragment : BaseFragment<FragmentExamListBinding, ExamListViewModel
 
         examListAdapter.click = object : (Exam) -> Unit {
             override fun invoke(exam: Exam) {
-                val action =
-                    ExamListFragmentDirections.actionExamListFragmentToSolveExamFragment(exam)
+                /*
+                if (exam.solved) {
+                    Toast.makeText(requireContext(), "Bu sınav çözüldü", Toast.LENGTH_SHORT).show()
+                    return
+                }
+                */
+
+                val action = ExamListFragmentDirections
+                    .actionExamListFragmentToSolveExamFragment(exam)
                 navigate(action)
             }
         }

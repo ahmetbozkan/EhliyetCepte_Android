@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.ui.common
+package com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog
 
 import android.os.Parcelable
 import androidx.annotation.ColorRes

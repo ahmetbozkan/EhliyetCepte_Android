@@ -36,7 +36,7 @@ class ResultViewModel @Inject constructor(
     private fun updateExam(exam: Exam) =
         viewModelScope.launch(Dispatchers.IO + genericExceptionHandler) {
             val updatedExam = exam.copy(
-                isSolved = true,
+                solved = true,
                 solvedDate = System.currentTimeMillis()
             )
 

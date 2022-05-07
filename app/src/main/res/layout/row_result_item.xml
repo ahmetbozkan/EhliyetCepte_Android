@@ -51,7 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            tools:src="@drawable/ic_display"
+            android:src="@drawable/ic_display"
             android:tint="@color/black"
             android:textColor="@color/black"
             android:layout_weight="0.5"/>
