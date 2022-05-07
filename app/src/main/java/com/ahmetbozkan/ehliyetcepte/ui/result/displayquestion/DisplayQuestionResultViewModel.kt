@@ -38,4 +38,9 @@ class DisplayQuestionResultViewModel @Inject constructor() : BaseViewModel() {
         _currentQuestion.postValue(examWithQuestions.questions[index])
     }
 
+    fun onNavigatorClicked(index: Int) {
+        _index = index
+        _currentQuestion.postValue(examWithQuestions.questions[index])
+    }
+
 }

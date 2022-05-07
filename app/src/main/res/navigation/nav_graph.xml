@@ -41,12 +41,12 @@
     </fragment>
     <dialog
         android:id="@+id/multiSelectionDialogFragment"
-        android:name="com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogFragment"
         android:label="dialog_fragment_multi_selection"
         tools:layout="@layout/dialog_fragment_multi_selection" >
         <argument
             android:name="model"
-            app:argType="com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel" />
+            app:argType="com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel" />
     </dialog>
     <fragment
         android:id="@+id/resultFragment"

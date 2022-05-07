@@ -10,9 +10,11 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentDisplayQuestionResultBinding
+import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.QuestionNavigatorAdapter
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
 import com.ahmetbozkan.ehliyetcepte.util.extension.visible
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class DisplayQuestionResultFragment :
@@ -24,12 +26,15 @@ class DisplayQuestionResultFragment :
 
     private val args: DisplayQuestionResultFragmentArgs by navArgs()
 
-    private lateinit var questions: List<Question>
+    @Inject
+    lateinit var questionNavigatorAdapter: QuestionNavigatorAdapter
 
     override fun initialize(savedInstanceState: Bundle?) {
         getArgs()
 
         manageClick()
+
+        setQuestionIndicatorRcv()
 
         observeLiveData()
     }
@@ -81,6 +86,8 @@ class DisplayQuestionResultFragment :
                 btnNextQuestion.invisible()
             else
                 btnNextQuestion.visible()
+
+            questionNavigatorAdapter.submitList(viewModel.examWithQuestions.questions)
         }
     }
 
@@ -99,6 +106,20 @@ class DisplayQuestionResultFragment :
             binding.rgroupOptions.findViewWithTag<AppCompatRadioButton>(
                 question.selectedOption.name
             ).background = ContextCompat.getDrawable(requireContext(), R.color.red_error)
+        }
+    }
+
+    private fun setQuestionIndicatorRcv() {
+        binding.rcvQuestionNavigator.apply {
+            setHasFixedSize(true)
+            adapter = questionNavigatorAdapter
+        }
+
+        questionNavigatorAdapter.click = object : (Int) -> Unit {
+            override fun invoke(index: Int) {
+                viewModel.onNavigatorClicked(index)
+            }
+
         }
     }
 

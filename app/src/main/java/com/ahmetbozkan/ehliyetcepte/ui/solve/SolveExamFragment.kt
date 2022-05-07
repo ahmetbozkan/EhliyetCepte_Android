@@ -14,8 +14,8 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
-import com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel
-import com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionType
+import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel
+import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionType
 import com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
 import com.ahmetbozkan.ehliyetcepte.util.extension.orZero

@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.ui.common
+package com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog
 
 import android.os.Bundle
 import androidx.core.os.bundleOf
@@ -8,8 +8,8 @@ import androidx.navigation.fragment.navArgs
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseDialogFragment
 import com.ahmetbozkan.ehliyetcepte.databinding.DialogFragmentMultiSelectionBinding
-import com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel.Companion.SINGLE_BUTTON_DIALOG_BUTTON_ACTION_KEY
-import com.ahmetbozkan.ehliyetcepte.ui.common.MultiSelectionDialogModel.Companion.SINGLE_BUTTON_DIALOG_RETURN_KEY
+import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel.Companion.SINGLE_BUTTON_DIALOG_BUTTON_ACTION_KEY
+import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel.Companion.SINGLE_BUTTON_DIALOG_RETURN_KEY
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

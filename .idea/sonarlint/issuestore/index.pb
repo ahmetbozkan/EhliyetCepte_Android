@@ -86,3 +86,7 @@ n
 >app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
 z
 Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Question.kt,e/0/e0169187c18cccdb789957f4d29e66fc60de4548
+{
+Kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultViewModel.kt,1/e/1e2a6d181888749aac88eceab600bfa5098ad4e9
+y
+Iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultAdapter.kt,1/b/1b3f3c869a32a912269c94f890ed306044504568
