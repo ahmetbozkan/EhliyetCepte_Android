@@ -65,6 +65,11 @@ class SolveExamViewModel @Inject constructor(
         _currentQuestion.postValue(examWithQuestions.questions[index])
     }
 
+    fun onNavigatorClicked(index: Int) {
+        _index = index
+        _currentQuestion.postValue(examWithQuestions.questions[index])
+    }
+
     fun onOptionSelected(selectedOption: Options, isSelectedOptionSame: Boolean) {
         val currentQuestionId = currentQuestion.value?.questionId.orZero()
 

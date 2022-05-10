@@ -1,6 +1,8 @@
 package com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator
 
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
@@ -13,7 +15,9 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.RowQuestionNavigatorItemBinding
 import javax.inject.Inject
 
-class QuestionNavigatorAdapter @Inject constructor() :
+class QuestionNavigatorAdapter @Inject constructor(
+    private val type: NavigatorTypes
+) :
     ListAdapter<Question, QuestionNavigatorAdapter.QuestionNavigatorViewHolder>(
         diffUtil
     ) {
@@ -39,15 +43,12 @@ class QuestionNavigatorAdapter @Inject constructor() :
         holder.binding.apply {
             tvIndex.text = (position.plus(1)).toString()
 
-            root.backgroundTintList = when (currentItem.selectedOption) {
-                Options.NONE -> {
-                    ContextCompat.getColorStateList(root.context, android.R.color.transparent)
+            root.backgroundTintList = when(type) {
+                NavigatorTypes.SOLVE_EXAM -> {
+                    manageSolveExamNavigatorBackground(root, currentItem)
                 }
-                currentItem.correctOption -> {
-                    ContextCompat.getColorStateList(root.context, R.color.teal_200)
-                }
-                else -> {
-                    ContextCompat.getColorStateList(root.context, R.color.red_error)
+                NavigatorTypes.DISPLAY_RESULT -> {
+                    manageDisplayResultNavigatorBackground(root, currentItem)
                 }
             }
 
@@ -57,19 +58,46 @@ class QuestionNavigatorAdapter @Inject constructor() :
         }
     }
 
+    private fun manageSolveExamNavigatorBackground(rootView: View, question: Question): ColorStateList? {
+        return if(question.selectedOption != Options.NONE) {
+            ContextCompat.getColorStateList(rootView.context, R.color.orange_warning)
+        }
+        else {
+            ContextCompat.getColorStateList(rootView.context, android.R.color.transparent)
+        }
+    }
+
+    private fun manageDisplayResultNavigatorBackground(rootView: View, question: Question): ColorStateList? {
+        return when (question.selectedOption) {
+            Options.NONE -> {
+                ContextCompat.getColorStateList(rootView.context, android.R.color.transparent)
+            }
+            question.correctOption -> {
+                ContextCompat.getColorStateList(rootView.context, R.color.teal_200)
+            }
+            else -> {
+                ContextCompat.getColorStateList(rootView.context, R.color.red_error)
+            }
+        }
+    }
+
     companion object {
         private val diffUtil = object : DiffUtil.ItemCallback<Question>() {
             override fun areItemsTheSame(
                 oldItem: Question,
                 newItem: Question
-            ): Boolean = oldItem.questionId == newItem.questionId
+            ): Boolean = oldItem.selectedOption == newItem.selectedOption
 
             override fun areContentsTheSame(
                 oldItem: Question,
                 newItem: Question
-            ): Boolean = oldItem == newItem
+            ): Boolean = oldItem.selectedOption == newItem.selectedOption
 
         }
     }
+}
 
+enum class NavigatorTypes {
+    SOLVE_EXAM,
+    DISPLAY_RESULT
 }

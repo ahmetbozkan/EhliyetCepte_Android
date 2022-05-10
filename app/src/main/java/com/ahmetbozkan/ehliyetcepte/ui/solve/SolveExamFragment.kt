@@ -16,6 +16,8 @@ import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
 import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel
 import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionType
+import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.NavigatorTypes
+import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.QuestionNavigatorAdapter
 import com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
 import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
@@ -34,8 +36,12 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
     private var pauseOffset: Long = 0
     private var running = false
 
+    private lateinit var questionNavigatorAdapter: QuestionNavigatorAdapter
+
     override fun initialize(savedInstanceState: Bundle?) {
         init()
+
+        setQuestionNavigatorRecyclerView()
 
         setExam()
 
@@ -46,7 +52,6 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
 
     private fun init() {
         chronometer = binding.chronometer
-
         startTimer()
     }
 
@@ -99,6 +104,9 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
                 btnNextQuestion.invisible()
             else
                 btnNextQuestion.visible()
+
+            questionNavigatorAdapter.submitList(viewModel.examWithQuestions.questions)
+            questionNavigatorAdapter.notifyDataSetChanged()
         }
     }
 
@@ -113,19 +121,19 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             }
 
             rbuttonOption1.setOnClickListener {
-                manageOptionSelection(Options.A)
+                onOptionSelected(Options.A)
             }
 
             rbuttonOption2.setOnClickListener {
-                manageOptionSelection(Options.B)
+                onOptionSelected(Options.B)
             }
 
             rbuttonOption3.setOnClickListener {
-                manageOptionSelection(Options.C)
+                onOptionSelected(Options.C)
             }
 
             rbuttonOption4.setOnClickListener {
-                manageOptionSelection(Options.D)
+                onOptionSelected(Options.D)
             }
 
             btnEndExam.setOnClickListener {
@@ -134,7 +142,7 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
         }
     }
 
-    private fun manageOptionSelection(selectedOption: Options) {
+    private fun onOptionSelected(selectedOption: Options) {
         val currentQuestionId = viewModel.currentQuestion.value?.questionId.orZero()
         val currentSelectedOption = viewModel.selectedOptions[currentQuestionId]
 
@@ -200,6 +208,22 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
     private fun setExamDuration() {
         val duration = SystemClock.elapsedRealtime() - binding.chronometer.base
         viewModel.examWithQuestions.exam.duration = duration
+    }
+
+    private fun setQuestionNavigatorRecyclerView() {
+        questionNavigatorAdapter = QuestionNavigatorAdapter(NavigatorTypes.SOLVE_EXAM)
+
+        binding.rcvQuestionNavigator.apply {
+            this.adapter = questionNavigatorAdapter
+            hasFixedSize()
+        }
+
+        questionNavigatorAdapter.click = object : (Int) -> Unit {
+            override fun invoke(index: Int) {
+                viewModel.onNavigatorClicked(index)
+            }
+
+        }
     }
 
     private fun startTimer() {

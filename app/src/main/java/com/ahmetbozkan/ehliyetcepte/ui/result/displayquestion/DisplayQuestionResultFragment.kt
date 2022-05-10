@@ -10,11 +10,11 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentDisplayQuestionResultBinding
+import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.NavigatorTypes
 import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.QuestionNavigatorAdapter
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
 import com.ahmetbozkan.ehliyetcepte.util.extension.visible
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class DisplayQuestionResultFragment :
@@ -26,8 +26,7 @@ class DisplayQuestionResultFragment :
 
     private val args: DisplayQuestionResultFragmentArgs by navArgs()
 
-    @Inject
-    lateinit var questionNavigatorAdapter: QuestionNavigatorAdapter
+    private lateinit var questionNavigatorAdapter: QuestionNavigatorAdapter
 
     override fun initialize(savedInstanceState: Bundle?) {
         getArgs()
@@ -110,9 +109,11 @@ class DisplayQuestionResultFragment :
     }
 
     private fun setQuestionIndicatorRcv() {
+        questionNavigatorAdapter = QuestionNavigatorAdapter(NavigatorTypes.DISPLAY_RESULT)
+
         binding.rcvQuestionNavigator.apply {
-            setHasFixedSize(true)
             adapter = questionNavigatorAdapter
+            hasFixedSize()
         }
 
         questionNavigatorAdapter.click = object : (Int) -> Unit {
