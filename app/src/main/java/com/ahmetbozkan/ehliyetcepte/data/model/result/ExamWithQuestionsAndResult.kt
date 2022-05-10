@@ -16,5 +16,5 @@ data class ExamWithQuestionsAndResult(
         parentColumn = "exam_id",
         entityColumn = "parent_exam_id"
     )
-    val result: Result
+    val result: Result?
 )

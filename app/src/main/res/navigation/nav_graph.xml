@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_landingFragment_to_examListFragment"
             app:destination="@id/examListFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_scoreboardFragment"
+            app:destination="@id/scoreboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -73,4 +76,9 @@
             android:name="examWithQuestions"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions" />
     </fragment>
+    <fragment
+        android:id="@+id/scoreboardFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.scoreboard.ScoreboardFragment"
+        android:label="fragment_scoreboard"
+        tools:layout="@layout/fragment_scoreboard" />
 </navigation>

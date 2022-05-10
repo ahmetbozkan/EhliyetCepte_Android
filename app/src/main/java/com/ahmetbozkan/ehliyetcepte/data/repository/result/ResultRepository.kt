@@ -1,5 +1,6 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.result
 
+import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.core.Resource
 import com.ahmetbozkan.ehliyetcepte.data.model.result.ExamWithQuestionsAndResult
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
@@ -25,5 +26,11 @@ interface ResultRepository {
      * @return ExamWithQuestionsAndResults object
      */
     suspend fun getExamWithQuestionsAndResult(examId: Long): Resource<ExamWithQuestionsAndResult>
+
+    /**
+     * get all the results from the db
+     * @return results as liveData to get observable list
+     */
+    fun getAllResults(): LiveData<List<ExamWithQuestionsAndResult>>
 
 }

@@ -1,5 +1,6 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.result
 
+import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.core.Resource
 import com.ahmetbozkan.ehliyetcepte.data.datasource.ResultDataSource
 import com.ahmetbozkan.ehliyetcepte.data.db.exam.ExamDao
@@ -24,5 +25,8 @@ class ResultRepositoryImpl @Inject constructor(
 
     override suspend fun getExamWithQuestionsAndResult(examId: Long): Resource<ExamWithQuestionsAndResult> =
         resultDataSource.getExamWithQuestionsAndResult(examId)
+
+    override fun getAllResults(): LiveData<List<ExamWithQuestionsAndResult>> =
+        dao.getAllResults()
 
 }
