@@ -80,5 +80,9 @@
         android:id="@+id/scoreboardFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.scoreboard.ScoreboardFragment"
         android:label="fragment_scoreboard"
-        tools:layout="@layout/fragment_scoreboard" />
+        tools:layout="@layout/fragment_scoreboard" >
+        <action
+            android:id="@+id/action_scoreboardFragment_to_displayQuestionResultFragment"
+            app:destination="@id/displayQuestionResultFragment" />
+    </fragment>
 </navigation>
