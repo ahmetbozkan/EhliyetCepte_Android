@@ -26,7 +26,7 @@ The questions in this application are not coming from any remote web server and 
   - <a href="https://developer.android.com/jetpack/guide" target="_blank">Model-View-ViewModel</a> - To have much more maintainable and clean code, lifecycle-aware structure.
   - <a href="https://developer.android.com/training/dependency-injection/hilt-android" target="_blank">Dagger-Hilt</a> - For dependency injection.
   - <a href="https://developer.android.com/topic/libraries/architecture/datastore?gclid=EAIaIQobChMIv-zh_rSF9wIVU5nVCh2MCwW7EAAYASAAEgKoofD_BwE&gclsrc=aw.ds" target="_blank">Jetpack DataStore</a> - To store small sized data with key-value pairs.
-  - <a href="https://developer.android.com/jetpack/androidx/releases/lifecycle" target="_blank">Lifecycle Libraries</a> - To access and use most recent functionalities of the lifecycle components like fragments, viewmodels etc.
+  - <a href="https://developer.android.com/jetpack/androidx/releases/lifecycle" target="_blank">Lifecycle SDK</a> - To access and use most recent functionalities of the lifecycle components like fragments, viewmodels etc.
 
 ---
 Although the application will be released on the Google Play Store, this repository and all the files of the app will be stay as public & open source so anyone can access, contribute and declare issues & problems and provide solutions. It's all open!
