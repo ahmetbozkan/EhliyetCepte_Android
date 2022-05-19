@@ -27,6 +27,7 @@ abstract class BaseViewModel : ViewModel() {
     }
 
     protected fun manageException(error: Exception?) {
+        disableLoading()
         _error.postValue(error)
     }
 

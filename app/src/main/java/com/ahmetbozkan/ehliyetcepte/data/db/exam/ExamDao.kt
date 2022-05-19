@@ -54,6 +54,10 @@ interface ExamDao {
     suspend fun insert(result: Result)
 
     @Transaction
+    @Query("SELECT * FROM exams")
+    fun getAllResults(): LiveData<List<ExamWithQuestionsAndResult>>
+
+    @Transaction
     @Query("SELECT * FROM exams WHERE exam_id = :examId")
     suspend fun getExamWithQuestionsAndResult(examId: Long): ExamWithQuestionsAndResult
 

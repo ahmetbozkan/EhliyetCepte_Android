@@ -1,5 +1,6 @@
 package com.ahmetbozkan.ehliyetcepte.ui.solve
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.SystemClock
 import android.widget.Chronometer
@@ -72,6 +73,7 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
         setFields(exam, question, options)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun setFields(exam: Exam, question: Question, options: List<Answer>) {
         binding.apply {
             tvQuestion.text = question.question

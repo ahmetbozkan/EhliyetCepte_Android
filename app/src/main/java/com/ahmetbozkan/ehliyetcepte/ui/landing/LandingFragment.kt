@@ -29,6 +29,12 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
 
                 navigate(action)
             }
+
+            btnScoreboard.setOnClickListener {
+                val action = LandingFragmentDirections.actionLandingFragmentToScoreboardFragment()
+
+                navigate(action)
+            }
         }
     }
 
