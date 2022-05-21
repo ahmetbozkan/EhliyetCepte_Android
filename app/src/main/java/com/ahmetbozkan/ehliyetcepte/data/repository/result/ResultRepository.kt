@@ -2,6 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.repository.result
 
 import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.core.Resource
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.model.result.ExamWithQuestionsAndResult
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 import com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity
@@ -32,5 +33,11 @@ interface ResultRepository {
      * @return results as liveData to get observable list
      */
     fun getAllResults(): LiveData<List<ExamWithQuestionsAndResult>>
+
+    /**
+     * get all the results from the db with given category
+     * @return results as liveData to get observable list
+     */
+    fun getAllResults(category: ExamCategories): LiveData<List<ExamWithQuestionsAndResult>>
 
 }

@@ -58,6 +58,10 @@ interface ExamDao {
     fun getAllResults(): LiveData<List<ExamWithQuestionsAndResult>>
 
     @Transaction
+    @Query("SELECT * FROM exams WHERE category = :category")
+    fun getAllResults(category: ExamCategories): LiveData<List<ExamWithQuestionsAndResult>>
+
+    @Transaction
     @Query("SELECT * FROM exams WHERE exam_id = :examId")
     suspend fun getExamWithQuestionsAndResult(examId: Long): ExamWithQuestionsAndResult
 

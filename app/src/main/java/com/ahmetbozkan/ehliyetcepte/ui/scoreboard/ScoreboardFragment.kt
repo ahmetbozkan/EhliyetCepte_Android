@@ -4,9 +4,12 @@ import android.os.Bundle
 import androidx.fragment.app.viewModels
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
 import com.ahmetbozkan.ehliyetcepte.data.model.result.ExamWithQuestionsAndResult
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentScoreboardBinding
+import com.ahmetbozkan.ehliyetcepte.ui.common.examcategory.ExamCategory
+import com.ahmetbozkan.ehliyetcepte.ui.common.examcategory.ExamCategoryAdapter
 import com.ahmetbozkan.ehliyetcepte.util.Event
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -21,11 +24,16 @@ class ScoreboardFragment : BaseFragment<FragmentScoreboardBinding, ScoreboardVie
     @Inject
     lateinit var scoreboardAdapter: ScoreboardAdapter
 
+    @Inject
+    lateinit var examCategoriesAdapter: ExamCategoryAdapter
+
     override fun initialize(savedInstanceState: Bundle?) {
 
         observeLiveData()
 
         setScoreboardRecyclerView()
+
+        setExamCategoryRecyclerView()
 
     }
 
@@ -48,6 +56,33 @@ class ScoreboardFragment : BaseFragment<FragmentScoreboardBinding, ScoreboardVie
 
             navigate(action)
         }
+    }
+
+    private fun setExamCategoryRecyclerView() {
+        binding.rcvCategoriesFilter.apply {
+            setHasFixedSize(true)
+            adapter = examCategoriesAdapter
+        }
+
+        examCategoriesAdapter.click = object : (ExamCategory) -> Unit {
+            override fun invoke(category: ExamCategory) {
+                viewModel.onCategorySelected(category.category)
+
+                examCategoriesAdapter.onCategorySelected(category)
+            }
+        }
+
+        setCategories()
+    }
+
+    private fun setCategories() {
+        val categories = ExamCategories.values().map { category ->
+            ExamCategory(category.value, category, false)
+        }.apply {
+            find { it.id == ExamCategories.ALL.value }?.isSelected = true
+        }
+
+        examCategoriesAdapter.submitList(categories)
     }
 
     private fun setScoreboardRecyclerView() {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.ahmetbozkan.ehliyetcepte.ui.common.examcategory.ExamCategory" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/black"
+            tools:text="Deneme" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

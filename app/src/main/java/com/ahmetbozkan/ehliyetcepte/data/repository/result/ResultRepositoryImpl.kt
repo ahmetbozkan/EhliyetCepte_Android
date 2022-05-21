@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.core.Resource
 import com.ahmetbozkan.ehliyetcepte.data.datasource.ResultDataSource
 import com.ahmetbozkan.ehliyetcepte.data.db.exam.ExamDao
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
 import com.ahmetbozkan.ehliyetcepte.data.model.result.ExamWithQuestionsAndResult
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 import com.ahmetbozkan.ehliyetcepte.data.util.ResultMapper
@@ -28,5 +29,9 @@ class ResultRepositoryImpl @Inject constructor(
 
     override fun getAllResults(): LiveData<List<ExamWithQuestionsAndResult>> =
         dao.getAllResults()
+
+    override fun getAllResults(category: ExamCategories): LiveData<List<ExamWithQuestionsAndResult>> =
+        dao.getAllResults(category)
+
 
 }

@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.24641833810888253" />
         <entry key="app/src/main/res/layout/fragment_scoreboard.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/fragment_solve_exam.xml" value="0.2092010498046875" />
+        <entry key="app/src/main/res/layout/row_exam_category_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_exam_item.xml" value="0.2065972222222222" />
         <entry key="app/src/main/res/layout/row_question_navigator_item.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/row_result_item.xml" value="0.27546296296296297" />

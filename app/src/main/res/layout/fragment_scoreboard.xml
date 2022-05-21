@@ -13,11 +13,20 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_categories_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/row_exam_category_item" />
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv_scoreboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_categories_filter"
             tools:itemCount="4"
             tools:listitem="@layout/row_scoreboard_item" />
 
