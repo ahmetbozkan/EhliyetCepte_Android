@@ -46,6 +46,14 @@
             app:layout_constraintStart_toStartOf="@id/tv_exam_name"
             app:layout_constraintTop_toTopOf="@id/tv_exam_name" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_question"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:src="@drawable/ic_image_placeholder"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@id/tv_exam_name" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_question"
             android:layout_width="match_parent"
@@ -53,7 +61,7 @@
             android:layout_margin="8dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_exam_name"
+            app:layout_constraintTop_toBottomOf="@id/img_question"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
 
         <RadioGroup

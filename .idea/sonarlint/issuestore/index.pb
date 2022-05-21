@@ -11,8 +11,6 @@ s
 Capp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseFragment.kt,8/a/8a0a7f517b7528e18ba323c3c088186e606aa5cb
 û
 napp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/preferences/PreferencesManagerRepositoryImpl.kt,7/3/734fa9779317c54aef59f91ecf4ad552d10c6038
-P
- app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
 O
 .idea/dictionaries/altamira.xml,3/e/3eaa8c99dbf8159e6aa78071716c16838852d19c
 :
@@ -26,8 +24,6 @@ Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/util/AnswerConverters.kt,b
 _app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamDbCallbackRepository.kt,e/1/e166c5c93cb744ab5a8853b01a21ee521f40db64
 }
 Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingViewModel.kt,8/0/807ba4a03bbb40d98e2d7f4ef4eb69495112155f
-@
-app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 Ö
 Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepository.kt,0/d/0d97bbde7270f930a3af40c5b46267363f78bffd
 y
@@ -76,14 +72,10 @@ v
 Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Exam.kt,4/3/431a3eff088b0c8aaef973be169a625fa558a30b
 x
 Happ/src/main/java/com/ahmetbozkan/ehliyetcepte/data/util/ResultMapper.kt,6/4/64f9834e5746efa6a51130346203eb6ca7cd103b
-}
-Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/SolveExamViewModel.kt,e/c/ec43f0686396a4605556a6b1a756b43f7d30f323
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingFragment.kt,8/1/810f74af8fc66cf3a2a508e7d68f488f57ff4293
 Å
 Qapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/scoreboard/ScoreboardAdapter.kt,6/c/6c27adc87925d36e483f2c4bb8d8518de485c1d4
-|
-Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/SolveExamFragment.kt,7/a/7acc98cad90be2a949e39c4d12888ae16da8e696
 ~
 Napp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/examlist/ExamListFragment.kt,9/0/9067e8d2036782525fe9d6ef51d9e675dfcbb582
 

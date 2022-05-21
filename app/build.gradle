@@ -78,6 +78,9 @@ dependencies {
     // gson
     implementation deps.gson
 
+    // swiperefresh
+    implementation deps.androidx.swipe_refresh
+
     implementation deps.kotlin.ktx
     implementation deps.androidx.appcompat
     implementation deps.material

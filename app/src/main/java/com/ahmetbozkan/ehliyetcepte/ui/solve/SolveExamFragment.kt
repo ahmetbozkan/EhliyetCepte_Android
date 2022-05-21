@@ -21,8 +21,10 @@ import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.NavigatorTypes
 import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.QuestionNavigatorAdapter
 import com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity
 import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
+import com.ahmetbozkan.ehliyetcepte.util.extension.loadUrl
 import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import com.ahmetbozkan.ehliyetcepte.util.extension.visible
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -79,6 +81,16 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             tvQuestion.text = question.question
             tvExamName.text = exam.name
 
+            if (question.imageUrl.isNotEmpty()) {
+                Glide.with(requireContext())
+                    .asBitmap()
+                    .load(question.imageUrl)
+                    .override(300, 200)
+                    .into(imgQuestion)
+            }
+
+            imgQuestion.loadUrl(question.imageUrl)
+
             rbuttonOption1.text =
                 getString(R.string.question_option_format, options[0].option, options[0].optionFull)
             rbuttonOption2.text =
@@ -97,15 +109,11 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             } else
                 rgroupOptions.clearCheck()
 
-            if (viewModel.index == 0)
-                btnPreviousQuestion.invisible()
-            else
-                btnPreviousQuestion.visible()
+            if (viewModel.index == 0) btnPreviousQuestion.invisible()
+            else btnPreviousQuestion.visible()
 
-            if (viewModel.index == viewModel.examWithQuestions.questions.size - 1)
-                btnNextQuestion.invisible()
-            else
-                btnNextQuestion.visible()
+            if (viewModel.index == viewModel.examWithQuestions.questions.size - 1) btnNextQuestion.invisible()
+            else btnNextQuestion.visible()
 
             questionNavigatorAdapter.submitList(viewModel.examWithQuestions.questions)
             questionNavigatorAdapter.notifyDataSetChanged()

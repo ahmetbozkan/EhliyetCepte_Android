@@ -38,9 +38,10 @@ buildscript {
                         'coroutines'       : '1.5.0',
                         'room'             : '2.4.2',
                         'datastore'        : '1.0.0',
-                        'glide'            : '4.12.0',
+                        'glide'            : '4.13.2',
                         'dexter_permission': '6.2.3',
-                        'gson'             : '2.9.0'
+                        'gson'             : '2.9.0',
+                        'swipe_refresh'    : '1.1.0'
                 ]
         ]
 
@@ -68,7 +69,9 @@ buildscript {
                                 "androidx.navigation:navigation-ui-ktx:$versions.ext.navigation"
                         ],
 
-                        'reyclerview'     : "androidx.recyclerview:recyclerview:$versions.ext.recyclerview"
+                        'reyclerview'     : "androidx.recyclerview:recyclerview:$versions.ext.recyclerview",
+
+                        'swipe_refresh'   : "androidx.swiperefreshlayout:swiperefreshlayout:$versions.ext.swipe_refresh"
                 ],
 
                 'material'         : "com.google.android.material:material:$versions.core.material",
