@@ -10,10 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Answer
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.*
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
 import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel
 import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionType
@@ -65,17 +62,24 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
     }
 
     private fun observeCurrentQuestion(question: Question) {
-        val exam = viewModel.examWithQuestions.exam
+        val examWithQuestions = viewModel.examWithQuestions
         val options = question.answers
 
-        setFields(exam, question, options)
+        setFields(examWithQuestions, question, options)
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun setFields(exam: Exam, question: Question, options: List<Answer>) {
+    private fun setFields(examWithQuestions: ExamWithQuestions, question: Question, options: List<Answer>) {
         binding.apply {
+            val questions = examWithQuestions.questions
+            val exam = examWithQuestions.exam
+
             tvQuestion.text = question.question
             tvExamName.text = exam.name
+            tvExamIndex.text = getString(
+                R.string.question_index_format,
+                viewModel.index + 1, questions.size
+            )
 
             if (question.imageUrl.isNotEmpty()) {
                 imgQuestion.visible()
