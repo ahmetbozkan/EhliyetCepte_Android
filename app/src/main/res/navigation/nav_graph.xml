@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/solveExamFragment"
-        android:name="com.ahmetbozkan.ehliyetcepte.ui.solve.SolveExamFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.solve.exam.SolveExamFragment"
         android:label="fragment_solve_exam"
         tools:layout="@layout/fragment_solve_exam" >
         <argument

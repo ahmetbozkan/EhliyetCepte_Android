@@ -1,50 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.solve.exam.SolveExamFragment">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_exam_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/teal_200"
-            android:gravity="center"
-            android:padding="4dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Exam Name" />
-
-        <Chronometer
-            android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_exam_name"
-            app:layout_constraintStart_toStartOf="@id/tv_exam_name"
-            app:layout_constraintTop_toTopOf="@id/tv_exam_name" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_exam_index"
+            android:id="@+id/tv_question_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_exam_name"
-            app:layout_constraintEnd_toEndOf="@id/tv_exam_name"
-            app:layout_constraintTop_toTopOf="@id/tv_exam_name"
-            tools:text="4/20" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Kalan soru sayisi: 50" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_question"
@@ -54,7 +30,7 @@
             android:minHeight="200dp"
             android:scaleType="fitXY"
             android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@id/tv_exam_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_question_index"
             tools:src="@drawable/ic_image_placeholder"
             tools:visibility="visible" />
 
@@ -105,25 +81,6 @@
         </RadioGroup>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btn_previous_question"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/ic_arrow_back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rgroup_options"
-            app:tint="@color/black" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_end_exam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="End Exam"
-            app:layout_constraintEnd_toStartOf="@id/btn_next_question"
-            app:layout_constraintStart_toEndOf="@id/btn_previous_question"
-            app:layout_constraintTop_toTopOf="@id/btn_previous_question" />
-
-        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btn_next_question"
             android:layout_width="50dp"
             android:layout_height="45dp"
@@ -132,17 +89,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rgroup_options"
             app:tint="@color/black" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcv_question_navigator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/btn_end_exam"
-            tools:listitem="@layout/row_question_navigator_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

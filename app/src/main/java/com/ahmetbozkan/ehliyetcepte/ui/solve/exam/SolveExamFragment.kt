@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.ui.solve
+package com.ahmetbozkan.ehliyetcepte.ui.solve.exam
 
 import android.annotation.SuppressLint
 import android.os.Bundle

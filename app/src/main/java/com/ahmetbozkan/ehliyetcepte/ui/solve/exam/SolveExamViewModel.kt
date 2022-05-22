@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.ui.solve
+package com.ahmetbozkan.ehliyetcepte.ui.solve.exam
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
