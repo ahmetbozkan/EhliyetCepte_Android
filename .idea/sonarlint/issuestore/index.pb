@@ -13,9 +13,6 @@ Capp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseFragment.kt,8/a/8a0a7f
 napp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/preferences/PreferencesManagerRepositoryImpl.kt,7/3/734fa9779317c54aef59f91ecf4ad552d10c6038
 O
 .idea/dictionaries/altamira.xml,3/e/3eaa8c99dbf8159e6aa78071716c16838852d19c
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 x
 Happ/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Answer.kt,d/9/d9292f0b8a3a4723592fb178d98a7841ac6ed283
 |
@@ -56,12 +53,8 @@ Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamHolder.kt,8
 capp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamDbCallbackRepositoryImpl.kt,8/f/8fb754f3ce6d1de2ac9dd7a0ffd724edd3f9f8f4
 ñ
 fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/questionnavigator/QuestionNavigatorAdapter.kt,9/b/9bbd7c044ab182b9f1dfee905bb03f8632d6722c
-u
-Eapp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseDataSource.kt,4/7/4783cacdda10085229a81abdd454d469828830f6
 v
 Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Exam.kt,4/3/431a3eff088b0c8aaef973be169a625fa558a30b
-|
-Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingFragment.kt,8/1/810f74af8fc66cf3a2a508e7d68f488f57ff4293
 Å
 Qapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/scoreboard/ScoreboardAdapter.kt,6/c/6c27adc87925d36e483f2c4bb8d8518de485c1d4
 ~
@@ -70,14 +63,8 @@ Napp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/examlist/ExamListFragment.kt
 Oapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/examlist/ExamListViewModel.kt,3/e/3ebbb99044ae50f91e69bfc2b8ece6ad33486870
 Ö
 Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/exam/GetExamsUseCase.kt,3/8/38422aff6d9176c0dce4bc5f5df4857a7bc1d5cb
-â
-Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepositoryImpl.kt,f/9/f9f6732e33055dd05e2ee39b83c90251255e72da
-Ä
-Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/ExamDataSource.kt,7/a/7a383cd1038165298dd7bb1a115f68d50dd9df54
 é
 ^app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/result/ExamWithQuestionsAndResult.kt,4/6/463ce393369b35b8eed6f5c59b559186081b8cf2
-Ç
-Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/ResultDataSource.kt,c/6/c634065e95e155374bbc3827d8cf5be11d584768
 å
 \app/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/examcategory/ExamCategoryAdapter.kt,0/c/0c6686415d027304fb460395ddca61f391f63ce3
 ~

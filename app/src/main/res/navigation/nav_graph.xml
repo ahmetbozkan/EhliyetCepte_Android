@@ -9,19 +9,22 @@
         android:id="@+id/landingFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.landing.LandingFragment"
         android:label="fragment_landing"
-        tools:layout="@layout/fragment_landing" >
+        tools:layout="@layout/fragment_landing">
         <action
             android:id="@+id/action_landingFragment_to_examListFragment"
             app:destination="@id/examListFragment" />
         <action
             android:id="@+id/action_landingFragment_to_scoreboardFragment"
             app:destination="@id/scoreboardFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_solveWrongQuestionsFragment"
+            app:destination="@id/solveWrongQuestionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.examlist.ExamListFragment"
         android:label="fragment_exam_list"
-        tools:layout="@layout/fragment_exam_list" >
+        tools:layout="@layout/fragment_exam_list">
         <argument
             android:name="category"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories" />
@@ -33,7 +36,7 @@
         android:id="@+id/solveExamFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.solve.exam.SolveExamFragment"
         android:label="fragment_solve_exam"
-        tools:layout="@layout/fragment_solve_exam" >
+        tools:layout="@layout/fragment_solve_exam">
         <argument
             android:name="exam"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam" />
@@ -46,7 +49,7 @@
         android:id="@+id/multiSelectionDialogFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogFragment"
         android:label="dialog_fragment_multi_selection"
-        tools:layout="@layout/dialog_fragment_multi_selection" >
+        tools:layout="@layout/dialog_fragment_multi_selection">
         <argument
             android:name="model"
             app:argType="com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel" />
@@ -55,7 +58,7 @@
         android:id="@+id/resultFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.result.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
+        tools:layout="@layout/fragment_result">
         <argument
             android:name="result"
             app:argType="com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity" />
@@ -63,12 +66,14 @@
             android:id="@+id/action_resultFragment_to_displayQuestionResultFragment"
             app:destination="@id/displayQuestionResultFragment" />
     </fragment>
-    <action android:id="@+id/action_global_multiSelectionDialogFragment" app:destination="@id/multiSelectionDialogFragment" />
+    <action
+        android:id="@+id/action_global_multiSelectionDialogFragment"
+        app:destination="@id/multiSelectionDialogFragment" />
     <fragment
         android:id="@+id/displayQuestionResultFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.result.displayquestion.DisplayQuestionResultFragment"
         android:label="fragment_display_question_result"
-        tools:layout="@layout/fragment_display_question_result" >
+        tools:layout="@layout/fragment_display_question_result">
         <argument
             android:name="questionPosition"
             app:argType="integer" />
@@ -80,9 +85,14 @@
         android:id="@+id/scoreboardFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.scoreboard.ScoreboardFragment"
         android:label="fragment_scoreboard"
-        tools:layout="@layout/fragment_scoreboard" >
+        tools:layout="@layout/fragment_scoreboard">
         <action
             android:id="@+id/action_scoreboardFragment_to_displayQuestionResultFragment"
             app:destination="@id/displayQuestionResultFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/solveWrongQuestionsFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.solve.wrongquestions.SolveWrongQuestionsFragment"
+        android:label="SolveWrongQuestionsFragment"
+        tools:layout="@layout/fragment_solve_wrong_questions" />
 </navigation>

@@ -53,6 +53,10 @@ interface ExamDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(vararg question: WrongQuestion)
 
+    @Transaction
+    @Query("SELECT * FROM wrong_questions")
+    suspend fun getAllWrongQuestions(): List<WrongQuestion>
+
     /**
      * RESULT
      */

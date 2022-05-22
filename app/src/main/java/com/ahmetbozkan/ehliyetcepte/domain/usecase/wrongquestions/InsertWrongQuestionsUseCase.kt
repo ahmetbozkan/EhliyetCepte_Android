@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.domain.usecase
+package com.ahmetbozkan.ehliyetcepte.domain.usecase.wrongquestions
 
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.WrongQuestion
 import com.ahmetbozkan.ehliyetcepte.data.repository.question.QuestionRepository

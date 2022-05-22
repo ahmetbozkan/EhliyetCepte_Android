@@ -26,13 +26,17 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
             btnOpenPilotExams.setOnClickListener {
                 val action = LandingFragmentDirections
                     .actionLandingFragmentToExamListFragment(ExamCategories.PILOT)
-
                 navigate(action)
             }
 
             btnScoreboard.setOnClickListener {
                 val action = LandingFragmentDirections.actionLandingFragmentToScoreboardFragment()
+                navigate(action)
+            }
 
+            btnWrongQuestions.setOnClickListener {
+                val action = LandingFragmentDirections
+                    .actionLandingFragmentToSolveWrongQuestionsFragment()
                 navigate(action)
             }
         }

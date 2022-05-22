@@ -7,7 +7,7 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseViewModel
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.WrongQuestion
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
-import com.ahmetbozkan.ehliyetcepte.domain.usecase.InsertWrongQuestionsUseCase
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.wrongquestions.InsertWrongQuestionsUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.UpdateExamUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.result.CalculateResultUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.result.InsertResultUseCase
