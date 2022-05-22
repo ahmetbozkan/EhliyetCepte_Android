@@ -26,6 +26,4 @@ fun AppCompatImageView.loadUrl(url: String?) {
             .into(this)
 
     }
-
-
 }

@@ -28,11 +28,11 @@ class ScoreboardViewModel @Inject constructor(
     private val _examWithQuestions = MutableLiveData<Event<ExamWithQuestions>>()
     val examWithQuestions: LiveData<Event<ExamWithQuestions>> get() = _examWithQuestions
 
-    val results: LiveData<List<ExamWithQuestionsAndResult>> = _category.switchMap {
+    val results: LiveData<List<ExamWithQuestionsAndResult>> = _category.switchMap { category ->
         liveData {
-            when (it) {
+            when (category) {
                 ExamCategories.ALL -> emitSource(allResults)
-                else -> emitSource(getResultsWithCategory(it))
+                else -> emitSource(getResultsWithCategory(category))
             }
         }
     }

@@ -20,11 +20,7 @@ import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectio
 import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.NavigatorTypes
 import com.ahmetbozkan.ehliyetcepte.ui.common.questionnavigator.QuestionNavigatorAdapter
 import com.ahmetbozkan.ehliyetcepte.ui.result.SolvedExamEntity
-import com.ahmetbozkan.ehliyetcepte.util.extension.invisible
-import com.ahmetbozkan.ehliyetcepte.util.extension.loadUrl
-import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
-import com.ahmetbozkan.ehliyetcepte.util.extension.visible
-import com.bumptech.glide.Glide
+import com.ahmetbozkan.ehliyetcepte.util.extension.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -82,14 +78,10 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             tvExamName.text = exam.name
 
             if (question.imageUrl.isNotEmpty()) {
-                Glide.with(requireContext())
-                    .asBitmap()
-                    .load(question.imageUrl)
-                    .override(300, 200)
-                    .into(imgQuestion)
+                imgQuestion.visible()
+                imgQuestion.loadUrl(question.imageUrl)
             }
-
-            imgQuestion.loadUrl(question.imageUrl)
+            else imgQuestion.gone()
 
             rbuttonOption1.text =
                 getString(R.string.question_option_format, options[0].option, options[0].optionFull)
