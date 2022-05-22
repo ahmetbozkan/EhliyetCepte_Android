@@ -10,7 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.*
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Answer
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Options
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSolveExamBinding
 import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionDialogModel
 import com.ahmetbozkan.ehliyetcepte.ui.common.multiselectiondialog.MultiSelectionType
@@ -22,6 +25,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewModel>() {
+
     override fun getLayoutId(): Int = R.layout.fragment_solve_exam
 
     override val viewModel: SolveExamViewModel by viewModels()
@@ -84,8 +88,7 @@ class SolveExamFragment : BaseFragment<FragmentSolveExamBinding, SolveExamViewMo
             if (question.imageUrl.isNotEmpty()) {
                 imgQuestion.visible()
                 imgQuestion.loadUrl(question.imageUrl)
-            }
-            else imgQuestion.gone()
+            } else imgQuestion.gone()
 
             rbuttonOption1.text =
                 getString(R.string.question_option_format, options[0].option, options[0].optionFull)

@@ -2,10 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.db.exam
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamWithQuestions
-import com.ahmetbozkan.ehliyetcepte.data.model.exam.Question
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.*
 import com.ahmetbozkan.ehliyetcepte.data.model.result.ExamWithQuestionsAndResult
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
 
@@ -46,6 +43,15 @@ interface ExamDao {
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun update(question: Question)
+
+    /**
+     * WRONG QUESTIONS
+     */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(question: WrongQuestion)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(vararg question: WrongQuestion)
 
     /**
      * RESULT

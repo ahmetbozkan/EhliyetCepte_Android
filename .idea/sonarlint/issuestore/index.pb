@@ -38,10 +38,6 @@ Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/NullCheckExtensio
 Sapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamWithQuestions.kt,7/d/7d532afa53074fc461ee2efa6bcdaf98c18f055c
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/SolvedExamEntity.kt,2/2/2290fad0ee01847e99e05da3ca2541a4ab71123f
-p
-@app/src/main/java/com/ahmetbozkan/ehliyetcepte/util/Constants.kt,2/3/2349e36514361d706531d18a3668cf16abe6e608
-é
-^app/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/result/CalculateResultUseCase.kt,0/9/095dc300943aa657aca4636e71c31fe32b12b781
 q
 Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
 Ç
@@ -52,12 +48,8 @@ o
 ?app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainViewModel.kt,c/a/ca389c67796a15cd16a49d079a1a3c1da53d0585
 n
 >app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
-{
-Kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultViewModel.kt,1/e/1e2a6d181888749aac88eceab600bfa5098ad4e9
 y
 Iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultAdapter.kt,1/b/1b3f3c869a32a912269c94f890ed306044504568
-z
-Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Question.kt,e/0/e0169187c18cccdb789957f4d29e66fc60de4548
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamHolder.kt,8/5/85752649b5a8564ac161c64b11599130e2a2bb02
 ì
@@ -66,12 +58,8 @@ capp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamDbCallb
 fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/questionnavigator/QuestionNavigatorAdapter.kt,9/b/9bbd7c044ab182b9f1dfee905bb03f8632d6722c
 u
 Eapp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseDataSource.kt,4/7/4783cacdda10085229a81abdd454d469828830f6
-z
-Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/result/Result.kt,4/6/462fa2e3a786a179a01d2129a026cc5390671cf2
 v
 Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Exam.kt,4/3/431a3eff088b0c8aaef973be169a625fa558a30b
-x
-Happ/src/main/java/com/ahmetbozkan/ehliyetcepte/data/util/ResultMapper.kt,6/4/64f9834e5746efa6a51130346203eb6ca7cd103b
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingFragment.kt,8/1/810f74af8fc66cf3a2a508e7d68f488f57ff4293
 Å
@@ -86,8 +74,6 @@ Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/exam/GetExamsUseC
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepositoryImpl.kt,f/9/f9f6732e33055dd05e2ee39b83c90251255e72da
 Ä
 Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/ExamDataSource.kt,7/a/7a383cd1038165298dd7bb1a115f68d50dd9df54
-{
-Kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/exam/ExamDatabase.kt,7/2/72fcd361d0635d7f8ef9a9bae4c615a4db591cd7
 é
 ^app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/result/ExamWithQuestionsAndResult.kt,4/6/463ce393369b35b8eed6f5c59b559186081b8cf2
 Ç
@@ -100,16 +86,8 @@ Napp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ListExtension.kt
 Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamCategories.kt,d/e/deae0efad6c6f883f6b6dad4afeb808785a03ebe
 Ö
 Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/examcategory/ExamCategory.kt,5/4/54723e98b57f85fe99023135cc4535392a5fb30f
-ç
-]app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/result/ResultRepositoryImpl.kt,e/2/e2611fca0155404242c35f8b342f81effa2f444e
-â
-Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/result/ResultRepository.kt,e/a/eaa94404d4af7f4a39295fe1870c2ea6f7c4197e
-v
-Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/exam/ExamDao.kt,a/e/aee4629cff7252035f25f3a2a816b2422c897e49
 å
 \app/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/result/GetAllResultsUseCase.kt,9/e/9eef0658979d16b0a3303b53b2b14dd30ff6138d
-}
-Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/SolveExamViewModel.kt,e/c/ec43f0686396a4605556a6b1a756b43f7d30f323
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @

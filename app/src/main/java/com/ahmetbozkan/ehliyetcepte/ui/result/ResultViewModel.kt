@@ -5,7 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.ahmetbozkan.ehliyetcepte.base.BaseViewModel
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.Exam
+import com.ahmetbozkan.ehliyetcepte.data.model.exam.WrongQuestion
 import com.ahmetbozkan.ehliyetcepte.data.model.result.Result
+import com.ahmetbozkan.ehliyetcepte.domain.usecase.InsertWrongQuestionsUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.exam.UpdateExamUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.result.CalculateResultUseCase
 import com.ahmetbozkan.ehliyetcepte.domain.usecase.result.InsertResultUseCase
@@ -18,7 +20,8 @@ import javax.inject.Inject
 class ResultViewModel @Inject constructor(
     private val calculateResultUseCase: CalculateResultUseCase,
     private val updateExamUseCase: UpdateExamUseCase,
-    private val insertResultUseCase: InsertResultUseCase
+    private val insertResultUseCase: InsertResultUseCase,
+    private val insertWrongQuestionsUseCase: InsertWrongQuestionsUseCase
 ) : BaseViewModel() {
 
     private val _calculatedResult = MutableLiveData<Result>()
@@ -26,11 +29,12 @@ class ResultViewModel @Inject constructor(
 
     fun onExamFinished(solvedExamEntity: SolvedExamEntity) {
         val result = calculateResultUseCase.invoke(solvedExamEntity)
-
         _calculatedResult.postValue(result)
 
-        updateExam(solvedExamEntity.examWithQuestions.exam)
         insertResult(result)
+
+        updateExam(solvedExamEntity.examWithQuestions.exam)
+        insertWrongQuestions(result.wrongQuestions)
     }
 
     private fun updateExam(exam: Exam) =
@@ -46,5 +50,10 @@ class ResultViewModel @Inject constructor(
     private fun insertResult(result: Result) =
         viewModelScope.launch(Dispatchers.IO + genericExceptionHandler) {
             insertResultUseCase.invoke(result)
+        }
+
+    private fun insertWrongQuestions(wrongQuestions: List<WrongQuestion>) =
+        viewModelScope.launch(Dispatchers.IO + genericExceptionHandler) {
+            insertWrongQuestionsUseCase.invoke(wrongQuestions)
         }
 }
