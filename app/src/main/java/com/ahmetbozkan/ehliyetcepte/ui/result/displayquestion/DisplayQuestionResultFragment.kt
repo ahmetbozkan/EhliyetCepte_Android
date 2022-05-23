@@ -76,15 +76,11 @@ class DisplayQuestionResultFragment :
 
             manageSelectedOption(question)
 
-            if (viewModel.index == 0)
-                btnPreviousQuestion.invisible()
-            else
-                btnPreviousQuestion.visible()
+            if (viewModel.index == 0) btnPreviousQuestion.invisible()
+            else btnPreviousQuestion.visible()
 
-            if (viewModel.index == viewModel.examWithQuestions.questions.size - 1)
-                btnNextQuestion.invisible()
-            else
-                btnNextQuestion.visible()
+            if (viewModel.index == viewModel.examWithQuestions.questions.size - 1) btnNextQuestion.invisible()
+            else btnNextQuestion.visible()
 
             questionNavigatorAdapter.submitList(viewModel.examWithQuestions.questions)
         }

@@ -54,4 +54,8 @@ class SolveWrongQuestionsViewModel @Inject constructor(
         _questions = questions
     }
 
+    fun onNextQuestionClicked() {
+
+    }
+
 }
