@@ -57,6 +57,9 @@ interface ExamDao {
     @Query("SELECT * FROM wrong_questions")
     suspend fun getAllWrongQuestions(): List<WrongQuestion>
 
+    @Delete
+    suspend fun delete(question: WrongQuestion)
+
     /**
      * RESULT
      */

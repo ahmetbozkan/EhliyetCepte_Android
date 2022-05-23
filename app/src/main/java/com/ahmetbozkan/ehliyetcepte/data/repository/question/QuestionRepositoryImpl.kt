@@ -20,4 +20,8 @@ class QuestionRepositoryImpl @Inject constructor(
     override suspend fun getAllWrongQuestions(): Resource<List<WrongQuestion>> =
         dataSource.getAllWrongQuestions()
 
+    override suspend fun delete(question: WrongQuestion) {
+        dataSource.delete(question)
+    }
+
 }

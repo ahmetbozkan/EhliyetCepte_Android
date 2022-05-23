@@ -19,4 +19,8 @@ class WrongQuestionDataSource @Inject constructor(private val dao: ExamDao) : Ba
         dao.getAllWrongQuestions()
     }
 
+    suspend fun delete(question: WrongQuestion) {
+        dao.delete(question)
+    }
+
 }

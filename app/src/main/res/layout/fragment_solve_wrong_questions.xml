@@ -8,8 +8,10 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clickable="false">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_question_index"
@@ -55,6 +57,7 @@
                 android:id="@+id/rbutton_option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="A"
                 tools:text="A) Option 1" />
 
@@ -62,6 +65,7 @@
                 android:id="@+id/rbutton_option2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="B"
                 tools:text="B) Option 1" />
 
@@ -69,6 +73,7 @@
                 android:id="@+id/rbutton_option3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="C"
                 tools:text="C) Option 1" />
 
@@ -76,6 +81,7 @@
                 android:id="@+id/rbutton_option4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:tag="D"
                 tools:text="D) Option 1" />
         </RadioGroup>

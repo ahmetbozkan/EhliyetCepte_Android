@@ -13,12 +13,14 @@ interface QuestionRepository {
     /**
      * insert wrong questions to db
      */
-    suspend fun insert(question: List<WrongQuestion>)
+    suspend fun insert(questions: List<WrongQuestion>)
 
     /**
      * get all wrong questions for solving later
      * @return list of WrongQuestions wrapped in resource
      */
     suspend fun getAllWrongQuestions(): Resource<List<WrongQuestion>>
+
+    suspend fun delete(question: WrongQuestion)
 
 }

@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_info.xml" value="0.1625" />
         <entry key="app/src/main/res/drawable/ic_success.xml" value="0.1725" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2065972222222222" />
-        <entry key="app/src/main/res/layout/dialog_fragment_multi_selection.xml" value="0.21153369916673379" />
+        <entry key="app/src/main/res/layout/dialog_fragment_multi_selection.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_display_question_result.xml" value="0.20684724030671298" />
         <entry key="app/src/main/res/layout/fragment_exam_list.xml" value="0.2065972222222222" />
         <entry key="app/src/main/res/layout/fragment_landing.xml" value="0.134979248046875" />
@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/layout/fragment_scoreboard.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/fragment_solve_exam.xml" value="0.2092010498046875" />
         <entry key="app/src/main/res/layout/fragment_solve_wrong_questions.xml" value="0.27546296296296297" />
+        <entry key="app/src/main/res/layout/layout_empty_questions.xml" value="0.274537037037037" />
         <entry key="app/src/main/res/layout/row_exam_category_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_exam_item.xml" value="0.2065972222222222" />
         <entry key="app/src/main/res/layout/row_question_navigator_item.xml" value="0.27546296296296297" />
