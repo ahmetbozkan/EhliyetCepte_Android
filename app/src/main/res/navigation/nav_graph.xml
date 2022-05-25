@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_landingFragment_to_solveWrongQuestionsFragment"
             app:destination="@id/solveWrongQuestionsFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_vehicleGaugesFragment"
+            app:destination="@id/vehicleGaugesFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -95,4 +98,8 @@
         android:name="com.ahmetbozkan.ehliyetcepte.ui.solve.wrongquestions.SolveWrongQuestionsFragment"
         android:label="SolveWrongQuestionsFragment"
         tools:layout="@layout/fragment_solve_wrong_questions" />
+    <fragment
+        android:id="@+id/vehicleGaugesFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.countdown.VehicleGaugesFragment"
+        android:label="VehicleGaugesFragment" />
 </navigation>

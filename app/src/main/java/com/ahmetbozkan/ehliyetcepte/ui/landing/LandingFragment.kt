@@ -39,6 +39,13 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
                     .actionLandingFragmentToSolveWrongQuestionsFragment()
                 navigate(action)
             }
+
+            btnVehicleGauges.setOnClickListener {
+                val action = LandingFragmentDirections
+                    .actionLandingFragmentToVehicleGaugesFragment()
+
+                navigate(action)
+            }
         }
     }
 
