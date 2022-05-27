@@ -8,5 +8,6 @@ class GetParsedQuestionListUseCase @Inject constructor(
     private val repository: ExamDbCallbackRepository
 ) {
     val questions = invoke()
+
     private operator fun invoke(): List<Question> = repository.getQuestionEntities()
 }
