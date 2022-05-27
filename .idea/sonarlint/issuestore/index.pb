@@ -1,7 +1,5 @@
 
 ˆ
-Xapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/preferences/PreferencesManager.kt,0/a/0ab650cee78ea7b1ec1c5be14e63cfc855e91b63
-ˆ
 Xapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/preferences/UserPreferences.kt,f/7/f70df06b94f20bf7f3615ca7c3b05206f61b148b
 „
 Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/DataStoreExtensions.kt,f/8/f8e233f30e038f35b13dfd65f2d528e7903676e3
@@ -17,8 +15,6 @@ Happ/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Answer.kt,d/9/d
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/util/AnswerConverters.kt,b/b/bb2be38090b9641a0066f5d1519e22d51c7db82c
 }
 Mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/landing/LandingViewModel.kt,8/0/807ba4a03bbb40d98e2d7f4ef4eb69495112155f
-…
-Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepository.kt,0/d/0d97bbde7270f930a3af40c5b46267363f78bffd
 y
 Iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Options.kt,4/d/4d7939e7a6f045b93e6d0fd0b2407fa76511de7d
 
@@ -29,14 +25,10 @@ Qapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/StringExtensions.
 Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/NullCheckExtensions.kt,a/1/a1f91c9814102b5beeddd97a1d8774c6e8424baa
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/SolvedExamEntity.kt,2/2/2290fad0ee01847e99e05da3ca2541a4ab71123f
-q
-Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
 ‚
 Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ContextExtensions.kt,8/0/8012c75326244380ec8780458e4e23b809700950
 o
 ?app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainViewModel.kt,c/a/ca389c67796a15cd16a49d079a1a3c1da53d0585
-n
->app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
 y
 Iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultAdapter.kt,1/b/1b3f3c869a32a912269c94f890ed306044504568
 –
@@ -59,8 +51,6 @@ Napp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ListExtension.kt
 Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamCategories.kt,d/e/deae0efad6c6f883f6b6dad4afeb808785a03ebe
 …
 Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/examcategory/ExamCategory.kt,5/4/54723e98b57f85fe99023135cc4535392a5fb30f
-Œ
-\app/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/result/GetAllResultsUseCase.kt,9/e/9eef0658979d16b0a3303b53b2b14dd30ff6138d
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @
@@ -69,18 +59,12 @@ P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
 ‚
 Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/scoreboard/ScoreboardFragment.kt,3/0/302605eb8ea293a134bd1309b0aeaa41426ed7a7
-ƒ
-Sapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/scoreboard/ScoreboardViewModel.kt,1/3/1393b5c3ffaa6b1bcc465b64c4f97d35d5a29d21
 z
 Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Question.kt,e/0/e0169187c18cccdb789957f4d29e66fc60de4548
-z
-Japp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultFragment.kt,7/f/7f88b25a8fb246a5530438f86a89d27b06931178
 Ž
 ^app/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/result/CalculateResultUseCase.kt,0/9/095dc300943aa657aca4636e71c31fe32b12b781
 
 ]app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/result/ResultRepositoryImpl.kt,e/2/e2611fca0155404242c35f8b342f81effa2f444e
-t
-Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/di/RepositoryBinds.kt,a/4/a4b68e18764bd71dc7b86cfec2a10c4be513cf92
 x
 Happ/src/main/java/com/ahmetbozkan/ehliyetcepte/data/util/ResultMapper.kt,6/4/64f9834e5746efa6a51130346203eb6ca7cd103b
 z
@@ -89,15 +73,9 @@ u
 Eapp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseDataSource.kt,4/7/4783cacdda10085229a81abdd454d469828830f6
 ‚
 Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/ResultDataSource.kt,c/6/c634065e95e155374bbc3827d8cf5be11d584768
-€
-Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/ExamDataSource.kt,7/a/7a383cd1038165298dd7bb1a115f68d50dd9df54
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-‰
-Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/result/ResultRepository.kt,e/a/eaa94404d4af7f4a39295fe1870c2ea6f7c4197e
-‰
-Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepositoryImpl.kt,f/9/f9f6732e33055dd05e2ee39b83c90251255e72da
 o
 ?app/src/main/java/com/ahmetbozkan/ehliyetcepte/core/Resource.kt,8/f/8fea14874b070896f29a7aef77e62bf64ad9c539
 
@@ -130,8 +108,6 @@ aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/question/Questio
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/WrongQuestionDataSource.kt,8/a/8a74624a6e4e26ceb581770d5197c6fb669a3b05
 
 ]app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/question/QuestionRepository.kt,e/e/eefafbf563196cbb16e3a63402be2d3de3fee262
-v
-Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/exam/ExamDao.kt,a/e/aee4629cff7252035f25f3a2a816b2422c897e49
 •
 eapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/wrongquestions/SolveWrongQuestionsFragment.kt,3/5/35913debeac434ee38095a17eaeda782e328d3a9
 –

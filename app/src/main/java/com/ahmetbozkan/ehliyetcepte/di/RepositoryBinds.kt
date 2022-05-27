@@ -8,6 +8,8 @@ import com.ahmetbozkan.ehliyetcepte.data.repository.question.QuestionRepository
 import com.ahmetbozkan.ehliyetcepte.data.repository.question.QuestionRepositoryImpl
 import com.ahmetbozkan.ehliyetcepte.data.repository.result.ResultRepository
 import com.ahmetbozkan.ehliyetcepte.data.repository.result.ResultRepositoryImpl
+import com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics.UsefulTopicsRepository
+import com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics.UsefulTopicsRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -33,5 +35,9 @@ abstract class RepositoryBinds {
     @Binds
     @ViewModelScoped
     abstract fun bindQuestionRepository(repositoryImpl: QuestionRepositoryImpl): QuestionRepository
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindUsefulTopicsRepository(repositoryImpl: UsefulTopicsRepositoryImpl): UsefulTopicsRepository
 
 }

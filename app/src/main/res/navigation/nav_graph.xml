@@ -100,6 +100,6 @@
         tools:layout="@layout/fragment_solve_wrong_questions" />
     <fragment
         android:id="@+id/vehicleGaugesFragment"
-        android:name="com.ahmetbozkan.ehliyetcepte.ui.countdown.VehicleGaugesFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.vehiclegauges.VehicleGaugesFragment"
         android:label="VehicleGaugesFragment" />
 </navigation>

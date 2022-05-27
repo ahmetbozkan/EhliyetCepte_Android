@@ -20,11 +20,10 @@ fun getJsonDataFromFile(context: Context, fileName: String): String? {
     return value
 }
 
-fun <T> parseJsonDataToList(context: Context, fileName: String): List<T> {
+fun <T> parseJsonDataToList(context: Context, fileName: String, typeToken: TypeToken<T>): T {
     val exams = getJsonDataFromFile(context, fileName)
 
     val gson = Gson()
-    val examListType = object : TypeToken<List<T>>() {}.type
 
-    return gson.fromJson(exams, examListType)
+    return gson.fromJson(exams, typeToken.type)
 }
