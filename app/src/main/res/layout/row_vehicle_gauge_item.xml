@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:backgroundTint="#90000000"
+        app:cardCornerRadius="0dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        tools:layout_width="100dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_vehicle_gauge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@drawable/ic_image_placeholder" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
