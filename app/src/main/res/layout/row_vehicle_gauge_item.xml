@@ -8,7 +8,7 @@
     </data>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="75dp"
         android:backgroundTint="#90000000"
         app:cardCornerRadius="0dp"
@@ -20,6 +20,7 @@
             android:id="@+id/img_vehicle_gauge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="center"
             tools:src="@drawable/ic_image_placeholder" />
 
     </com.google.android.material.card.MaterialCardView>

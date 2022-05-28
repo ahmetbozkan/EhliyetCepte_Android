@@ -6,9 +6,9 @@ import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentVehicleGaugesBinding
-import com.ahmetbozkan.ehliyetcepte.util.extension.orZero
 import com.ahmetbozkan.ehliyetcepte.util.extension.showToast
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class VehicleGaugesFragment : BaseFragment<FragmentVehicleGaugesBinding, VehicleGaugesViewModel>() {
@@ -17,9 +17,14 @@ class VehicleGaugesFragment : BaseFragment<FragmentVehicleGaugesBinding, Vehicle
 
     override val viewModel: VehicleGaugesViewModel by viewModels()
 
+    @Inject
+    lateinit var vehicleGaugesAdapter: VehicleGaugesAdapter
+
     override fun initialize(savedInstanceState: Bundle?) {
 
         subscribeToViewModel()
+
+        initRecyclerView()
 
     }
 
@@ -29,6 +34,23 @@ class VehicleGaugesFragment : BaseFragment<FragmentVehicleGaugesBinding, Vehicle
 
     private fun observeVehicleGauges(vehicleGauges: List<VehicleGauge>) {
         requireContext().showToast(vehicleGauges.size.toString())
+
+        vehicleGaugesAdapter.submitList(vehicleGauges)
+    }
+
+    private fun initRecyclerView() {
+        binding.rcvVehicleGauges.apply {
+            setHasFixedSize(true)
+            adapter = vehicleGaugesAdapter
+        }
+
+        vehicleGaugesAdapter.click = object : (VehicleGauge) -> Unit {
+            override fun invoke(entity: VehicleGauge) {
+                requireContext().showToast(entity.description)
+                // todo: aşağıdan araç göstergesinin açıklamasını belirten bir popup çıkar
+            }
+
+        }
     }
 
 
