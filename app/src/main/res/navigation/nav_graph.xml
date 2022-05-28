@@ -101,5 +101,17 @@
     <fragment
         android:id="@+id/vehicleGaugesFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.vehiclegauges.VehicleGaugesFragment"
-        android:label="VehicleGaugesFragment" />
+        android:label="VehicleGaugesFragment" >
+        <action
+            android:id="@+id/action_vehicleGaugesFragment_to_vehicleGaugeDetailDialogFragment"
+            app:destination="@id/vehicleGaugeDetailDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/vehicleGaugeDetailDialogFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.vehiclegauges.VehicleGaugeDetailDialogFragment"
+        android:label="VehicleGaugeDetailDialogFragment" >
+        <argument
+            android:name="vehicleGauge"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge" />
+    </dialog>
 </navigation>

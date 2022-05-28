@@ -90,8 +90,6 @@ kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/wrongquestions/Ge
 Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/exam/SolveExamViewModel.kt,6/0/60ad4e4b9ed7177136d3b4feabf4340c35f5ff48
 ™
 iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/displayquestion/DisplayQuestionResultFragment.kt,8/6/862d79a83d61434e7cbfe4784388f9cc53b2404e
-„
-Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ImageViewExtensions.kt,d/0/d05af0a113efbd8884d6478ca84f5bcc4ae9f735
 š
 japp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/multiselectiondialog/MultiSelectionDialogModel.kt,8/0/8086419769f6e9b9d7336aea8876186c815128a9
 Š
@@ -180,8 +178,6 @@ iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/usefultopics/Use
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/vehiclegauges/VehicleGaugesViewModel.kt,1/7/17a89c0ec145f42cf34a6cc03375a4b7c9fa257f
 ˆ
 Xapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/UsefulTopicsDataSource.kt,1/2/124ab7dccce654d6dd64bcc8825ac77f3c803839
-‡
-Wapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/vehiclegauges/VehicleGauge.kt,6/5/65db62230fec60135b85f04dedbf26a156624f68
 ™
 iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/vehiclegauges/GetAllVehicleGaugesUseCase.kt,2/3/23eb8caafa9e8ea6c437e47df1cc8ae30477314c
 

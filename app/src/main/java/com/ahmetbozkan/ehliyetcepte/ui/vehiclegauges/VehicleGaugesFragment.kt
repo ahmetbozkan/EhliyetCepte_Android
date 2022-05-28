@@ -46,8 +46,10 @@ class VehicleGaugesFragment : BaseFragment<FragmentVehicleGaugesBinding, Vehicle
 
         vehicleGaugesAdapter.click = object : (VehicleGauge) -> Unit {
             override fun invoke(entity: VehicleGauge) {
-                requireContext().showToast(entity.description)
-                // todo: aşağıdan araç göstergesinin açıklamasını belirten bir popup çıkar
+                val action = VehicleGaugesFragmentDirections
+                    .actionVehicleGaugesFragmentToVehicleGaugeDetailDialogFragment(entity)
+
+                navigate(action)
             }
 
         }
