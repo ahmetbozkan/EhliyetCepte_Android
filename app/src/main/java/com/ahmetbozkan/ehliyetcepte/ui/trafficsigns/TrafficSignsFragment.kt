@@ -42,7 +42,9 @@ class TrafficSignsFragment : BaseFragment<FragmentTrafficSignsBinding, TrafficSi
 
         trafficSignsAdapter.click = object : (TrafficSign) -> Unit {
             override fun invoke(entity: TrafficSign) {
-
+                val action = TrafficSignsFragmentDirections
+                    .actionTrafficSignsFragmentToTrafficSignDetailDialogFragment(entity)
+                navigate(action)
             }
 
         }

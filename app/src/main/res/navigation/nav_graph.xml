@@ -121,5 +121,18 @@
         android:id="@+id/trafficSignsFragment"
         android:name="com.ahmetbozkan.ehliyetcepte.ui.trafficsigns.TrafficSignsFragment"
         android:label="fragment_traffic_signs"
-        tools:layout="@layout/fragment_traffic_signs" />
+        tools:layout="@layout/fragment_traffic_signs" >
+        <action
+            android:id="@+id/action_trafficSignsFragment_to_trafficSignDetailDialogFragment"
+            app:destination="@id/trafficSignDetailDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/trafficSignDetailDialogFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.trafficsigns.TrafficSignDetailDialogFragment"
+        android:label="dialog_fragment_traffic_sign_detail"
+        tools:layout="@layout/dialog_fragment_traffic_sign_detail" >
+        <argument
+            android:name="trafficSign"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign" />
+    </dialog>
 </navigation>

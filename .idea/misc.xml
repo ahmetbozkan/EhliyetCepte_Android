@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_success.xml" value="0.1725" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2065972222222222" />
         <entry key="app/src/main/res/layout/dialog_fragment_multi_selection.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialog_fragment_traffic_sign_detail.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/dialog_fragment_vehicle_gauge_detail.xml" value="0.2671171171171171" />
         <entry key="app/src/main/res/layout/fragment_countdown.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/fragment_display_question_result.xml" value="0.20684724030671298" />
