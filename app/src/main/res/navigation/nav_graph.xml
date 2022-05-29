@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_landingFragment_to_vehicleGaugesFragment"
             app:destination="@id/vehicleGaugesFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_trafficSignsFragment"
+            app:destination="@id/trafficSignsFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -112,6 +115,11 @@
         android:label="VehicleGaugeDetailDialogFragment" >
         <argument
             android:name="vehicleGauge"
-            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge" />
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge" />
     </dialog>
+    <fragment
+        android:id="@+id/trafficSignsFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.trafficsigns.TrafficSignsFragment"
+        android:label="fragment_traffic_signs"
+        tools:layout="@layout/fragment_traffic_signs" />
 </navigation>

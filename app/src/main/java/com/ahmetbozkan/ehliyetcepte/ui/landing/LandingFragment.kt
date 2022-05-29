@@ -21,32 +21,35 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
 
     }
 
-    private fun manageClick() {
-        binding.apply {
-            btnOpenPilotExams.setOnClickListener {
-                val action = LandingFragmentDirections
-                    .actionLandingFragmentToExamListFragment(ExamCategories.PILOT)
-                navigate(action)
-            }
+    private fun manageClick() = with(binding) {
+        btnOpenPilotExams.setOnClickListener {
+            val action = LandingFragmentDirections
+                .actionLandingFragmentToExamListFragment(ExamCategories.PILOT)
+            navigate(action)
+        }
 
-            btnScoreboard.setOnClickListener {
-                val action = LandingFragmentDirections.actionLandingFragmentToScoreboardFragment()
-                navigate(action)
-            }
+        btnScoreboard.setOnClickListener {
+            val action = LandingFragmentDirections.actionLandingFragmentToScoreboardFragment()
+            navigate(action)
+        }
 
-            btnWrongQuestions.setOnClickListener {
-                val action = LandingFragmentDirections
-                    .actionLandingFragmentToSolveWrongQuestionsFragment()
-                navigate(action)
-            }
+        btnWrongQuestions.setOnClickListener {
+            val action = LandingFragmentDirections
+                .actionLandingFragmentToSolveWrongQuestionsFragment()
+            navigate(action)
+        }
 
-            btnVehicleGauges.setOnClickListener {
-                val action = LandingFragmentDirections
-                    .actionLandingFragmentToVehicleGaugesFragment()
+        btnVehicleGauges.setOnClickListener {
+            val action = LandingFragmentDirections
+                .actionLandingFragmentToVehicleGaugesFragment()
 
-                navigate(action)
-            }
+            navigate(action)
+        }
+
+        btnTrafficSigns.setOnClickListener {
+            val action = LandingFragmentDirections.actionLandingFragmentToTrafficSignsFragment()
+            navigate(action)
         }
     }
-
 }
+

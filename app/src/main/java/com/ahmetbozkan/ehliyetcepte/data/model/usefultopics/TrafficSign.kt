@@ -9,5 +9,5 @@ data class TrafficSign(
     @PrimaryKey(autoGenerate = true)
     @SerializedName("id") val id: Long = 0,
     @SerializedName("description") val description: String,
-    @SerializedName("image_url") val imageUrl: Stringw
+    @SerializedName("image_url") val imageUrl: String
 )

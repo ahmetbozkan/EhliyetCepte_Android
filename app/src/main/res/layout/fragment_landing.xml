@@ -36,5 +36,11 @@
             android:layout_height="wrap_content"
             android:text="araç gösterge paneli" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_traffic_signs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="trafik isaretleri" />
+
     </LinearLayout>
 </layout>

@@ -38,4 +38,9 @@ class VehicleGaugeDetailDialogFragment : BottomSheetDialogFragment() {
         }
     }
 
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
+    }
+
 }

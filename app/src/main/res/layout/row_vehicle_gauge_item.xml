@@ -9,7 +9,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="125dp"
         android:backgroundTint="#90000000"
         app:cardCornerRadius="0dp"
         app:strokeColor="@color/black"
