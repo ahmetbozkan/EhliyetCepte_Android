@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.viewModels
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
-import com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentVehicleGaugesBinding
 import com.ahmetbozkan.ehliyetcepte.util.extension.showToast
 import dagger.hilt.android.AndroidEntryPoint

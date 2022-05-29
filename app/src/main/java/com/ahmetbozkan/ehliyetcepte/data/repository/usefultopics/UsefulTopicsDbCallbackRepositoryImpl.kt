@@ -1,7 +1,8 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
 import android.content.Context
-import com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
 import com.ahmetbozkan.ehliyetcepte.util.Constants
 import com.ahmetbozkan.ehliyetcepte.util.extension.parseJsonDataToList
 import com.google.gson.reflect.TypeToken
@@ -18,6 +19,16 @@ class UsefulTopicsDbCallbackRepositoryImpl @Inject constructor(
         return parseJsonDataToList(
             context,
             Constants.VEHICLE_GAUGES_FILE_NAME,
+            typeToken
+        )
+    }
+
+    override fun getTrafficSignEntities(): List<TrafficSign> {
+        val typeToken = object : TypeToken<List<TrafficSign>>() {}
+
+        return parseJsonDataToList(
+            context,
+            Constants.TRAFFIC_SIGNS_FILE_NAME,
             typeToken
         )
     }

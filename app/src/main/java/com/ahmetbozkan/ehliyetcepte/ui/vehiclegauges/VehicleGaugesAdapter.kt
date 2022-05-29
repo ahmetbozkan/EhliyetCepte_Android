@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ahmetbozkan.ehliyetcepte.R
-import com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
 import com.ahmetbozkan.ehliyetcepte.databinding.RowVehicleGaugeItemBinding
 import com.ahmetbozkan.ehliyetcepte.util.extension.loadUrl
 import javax.inject.Inject

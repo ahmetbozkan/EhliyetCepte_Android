@@ -1,4 +1,4 @@
-package com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges
+package com.ahmetbozkan.ehliyetcepte.data.model.usefultopics
 
 import android.os.Parcelable
 import androidx.room.Entity

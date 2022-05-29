@@ -1,7 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
 import androidx.lifecycle.LiveData
-import com.ahmetbozkan.ehliyetcepte.data.model.vehiclegauges.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
 
 interface UsefulTopicsRepository {
 
