@@ -1,6 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
 import android.content.Context
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
 import com.ahmetbozkan.ehliyetcepte.util.Constants
@@ -29,6 +30,16 @@ class UsefulTopicsDbCallbackRepositoryImpl @Inject constructor(
         return parseJsonDataToList(
             context,
             Constants.TRAFFIC_SIGNS_FILE_NAME,
+            typeToken
+        )
+    }
+
+    override fun getExamTipsEntities(): List<ExamTip> {
+        val typeToken = object : TypeToken<List<ExamTip>>() {}
+
+        return parseJsonDataToList(
+            context,
+            Constants.EXAM_TIPS_FILE_NAME,
             typeToken
         )
     }

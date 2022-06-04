@@ -13,4 +13,4 @@ data class TrafficSign(
     @SerializedName("id") val id: Long = 0,
     @SerializedName("description") val description: String,
     @SerializedName("image_url") val imageUrl: String
-) : Parcelable
+): Parcelable

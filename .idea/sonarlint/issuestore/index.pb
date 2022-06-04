@@ -146,8 +146,6 @@ n
 >app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
 q
 Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
-{
-Kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/db/exam/ExamDatabase.kt,7/2/72fcd361d0635d7f8ef9a9bae4c615a4db591cd7
 “
 capp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamDbCallbackRepositoryImpl.kt,8/f/8fb754f3ce6d1de2ac9dd7a0ffd724edd3f9f8f4
 z

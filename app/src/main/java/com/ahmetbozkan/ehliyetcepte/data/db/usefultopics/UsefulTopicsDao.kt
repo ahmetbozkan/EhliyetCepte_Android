@@ -2,6 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.db.usefultopics
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
 
@@ -33,4 +34,17 @@ interface UsefulTopicsDao {
     @Transaction
     @Query("SELECT * FROM traffic_signs")
     fun getAllTrafficSigns(): LiveData<List<TrafficSign>>
+
+    /**
+     * EXAM TIPS
+     */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(examTip: ExamTip)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(vararg examTip: ExamTip)
+
+    @Transaction
+    @Query("SELECT * FROM exam_tips")
+    fun getAllExamTips(): LiveData<List<ExamTip>>
 }
