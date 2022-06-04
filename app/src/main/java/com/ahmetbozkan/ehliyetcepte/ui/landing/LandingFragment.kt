@@ -5,6 +5,7 @@ import androidx.fragment.app.viewModels
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.exam.ExamCategories
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTipTypes
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentLandingBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,6 +49,12 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
 
         btnTrafficSigns.setOnClickListener {
             val action = LandingFragmentDirections.actionLandingFragmentToTrafficSignsFragment()
+            navigate(action)
+        }
+
+        btnExamTips.setOnClickListener {
+            val action = LandingFragmentDirections
+                .actionLandingFragmentToExamTipsFragment(ExamTipTypes.DRIVING_EXAM_TIP)
             navigate(action)
         }
     }

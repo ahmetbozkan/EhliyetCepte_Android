@@ -27,8 +27,6 @@ Tapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/NullCheckExtensio
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/SolvedExamEntity.kt,2/2/2290fad0ee01847e99e05da3ca2541a4ab71123f
 Ç
 Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ContextExtensions.kt,8/0/8012c75326244380ec8780458e4e23b809700950
-o
-?app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainViewModel.kt,c/a/ca389c67796a15cd16a49d079a1a3c1da53d0585
 y
 Iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultAdapter.kt,1/b/1b3f3c869a32a912269c94f890ed306044504568
 ñ
@@ -86,8 +84,6 @@ Kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/ResultViewModel.kt,1/
 kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/wrongquestions/InsertWrongQuestionsUseCase.kt,a/0/a05db09c48717e002ab5e83f8f2dfc331de3ff34
 õ
 kapp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/wrongquestions/GetAllWrongQuestionsUseCase.kt,4/c/4cc67b77202eb9869241d7083eb47ac6b5d5665e
-Ç
-Rapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/exam/SolveExamViewModel.kt,6/0/60ad4e4b9ed7177136d3b4feabf4340c35f5ff48
 ô
 iapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/result/displayquestion/DisplayQuestionResultFragment.kt,8/6/862d79a83d61434e7cbfe4784388f9cc53b2404e
 ö
@@ -96,8 +92,6 @@ japp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/multiselectiondialog/M
 Zapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/bindingadapters/ViewBindingAdapters.kt,3/5/359ac4d9b22f5b07f68d9dc85fef42a72bb8a1a6
 ù
 mapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/multiselectiondialog/MultiSelectionDialogFragment.kt,d/7/d796c35e462b69e7254b8058de9c9253372cc6ed
-Å
-Qapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/exam/SolveExamFragment.kt,3/8/385ec7347349973fe833082685f86302a431d061
 l
 <app/src/main/java/com/ahmetbozkan/ehliyetcepte/util/Event.kt,a/f/afa73a8f20f5372912f6d15955ad782e318f1820
 ë
@@ -108,18 +102,12 @@ Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/WrongQuestionDat
 ]app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/question/QuestionRepository.kt,e/e/eefafbf563196cbb16e3a63402be2d3de3fee262
 ï
 eapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/wrongquestions/SolveWrongQuestionsFragment.kt,3/5/35913debeac434ee38095a17eaeda782e328d3a9
-ñ
-fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/solve/wrongquestions/SolveWrongQuestionsViewModel.kt,e/1/e14b52c9a213293b2170cabed64471f4167349dc
 ö
 japp/src/main/java/com/ahmetbozkan/ehliyetcepte/domain/usecase/wrongquestions/DeleteWrongQuestionUseCase.kt,d/7/d7a1ee2b1e094177859f7521528e33d639fd6baf
 s
 Capp/src/main/java/com/ahmetbozkan/ehliyetcepte/base/BaseFragment.kt,8/a/8a0a7f517b7528e18ba323c3c088186e606aa5cb
 è
 _app/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamDbCallbackRepository.kt,e/1/e166c5c93cb744ab5a8853b01a21ee521f40db64
-v
-Fapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/Exam.kt,4/3/431a3eff088b0c8aaef973be169a625fa558a30b
-|
-Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamHolder.kt,8/5/85752649b5a8564ac161c64b11599130e2a2bb02
 É
 Sapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamWithQuestions.kt,7/d/7d532afa53074fc461ee2efa6bcdaf98c18f055c
 s
@@ -142,8 +130,6 @@ Sapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/scoreboard/ScoreboardViewMode
 Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/datasource/ExamDataSource.kt,7/a/7a383cd1038165298dd7bb1a115f68d50dd9df54
 â
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/repository/exam/ExamRepositoryImpl.kt,f/9/f9f6732e33055dd05e2ee39b83c90251255e72da
-n
->app/src/main/java/com/ahmetbozkan/ehliyetcepte/MainActivity.kt,b/9/b92044aa4d49693ae61b98cbba42365618d89014
 q
 Aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/BaseApplication.kt,b/2/b2269d98399957d51d618ba079f2c3b643dbe84e
 ì
@@ -156,5 +142,3 @@ t
 Dapp/src/main/java/com/ahmetbozkan/ehliyetcepte/di/RepositoryBinds.kt,a/4/a4b68e18764bd71dc7b86cfec2a10c4be513cf92
 â
 Yapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/vehiclegauges/VehicleGaugesViewModel.kt,1/7/17a89c0ec145f42cf34a6cc03375a4b7c9fa257f
-
-Oapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/FileExtensions.kt,4/9/4975cf5a7b17cdc6279e65d9bd6cb098bfced854

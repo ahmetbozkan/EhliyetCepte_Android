@@ -8,10 +8,16 @@ import com.google.gson.annotations.SerializedName
 data class ExamTip(
     @PrimaryKey(autoGenerate = true)
     @SerializedName("id") val id: Long = 0,
+    @SerializedName("title") val title: String,
     @SerializedName("description") val description: String,
-    @SerializedName("image_url") val imageUrl: String,
-    @SerializedName("tip_type") val type: ExamTipTypes
-)
+    @SerializedName("tip_image_url") val imageUrl: String,
+    @SerializedName("tip_type") val _type: Int
+) {
+
+    private val type
+        get() = ExamTipTypes.getByValue(_type)
+
+}
 
 enum class ExamTipTypes(val value: Int) {
     WRITTEN_EXAM_TIP(1),

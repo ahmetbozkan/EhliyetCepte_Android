@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.examtips.ExamTipsFragment">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange_warning"
+                android:gravity="center"
+                android:paddingVertical="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_tip"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/img_tip"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus in risus vitae luctus. Morbi ligula mi, accumsan eget ornare sit amet, sodales at mauris. Ut ut ullamcorper augue, eget lacinia elit. Duis egestas molestie orci, id fermentum lectus. Vivamus ullamcorper, orci ut commodo viverra, velit sem pellentesque dui, vel dictum felis ipsum eget sem. Nam mattis risus turpis, eget imperdiet risus egestas a. Sed egestas mollis tortor. Ut vulputate, urna a feugiat fringilla, risus eros vulputate orci, eget dapibus urna nisi sit amet est. Nunc eu ultrices ex, sit amet porta tortor. Phasellus vitae ante consectetur, tempor est vitae, luctus lacus. Donec tincidunt lorem ut blandit faucibus." />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_previous_tip"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:tint="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_next_tip"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_arrow_forward"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

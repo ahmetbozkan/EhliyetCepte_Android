@@ -45,6 +45,6 @@ interface UsefulTopicsDao {
     suspend fun insert(vararg examTip: ExamTip)
 
     @Transaction
-    @Query("SELECT * FROM exam_tips")
-    fun getAllExamTips(): LiveData<List<ExamTip>>
+    @Query("SELECT * FROM exam_tips WHERE _type = :type")
+    suspend fun getExamTips(type: Int): List<ExamTip>
 }

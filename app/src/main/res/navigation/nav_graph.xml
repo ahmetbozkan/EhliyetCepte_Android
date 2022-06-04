@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_landingFragment_to_trafficSignsFragment"
             app:destination="@id/trafficSignsFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_examTipsFragment"
+            app:destination="@id/examTipsFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -135,4 +138,13 @@
             android:name="trafficSign"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign" />
     </dialog>
+    <fragment
+        android:id="@+id/examTipsFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.examtips.ExamTipsFragment"
+        android:label="fragment_exam_tips"
+        tools:layout="@layout/fragment_exam_tips" >
+        <argument
+            android:name="type"
+            app:argType="com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTipTypes" />
+    </fragment>
 </navigation>

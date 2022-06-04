@@ -2,37 +2,37 @@
   {
     "title": "Yazılı sınav tüyo 1",
     "description": "Yazılı sınav aciklama 1",
-    "tip_image_url": "tuyo aciklama",
+    "tip_image_url": "https://external-preview.redd.it/5g6RMUt92-JV-VFWgRpavB4v2DATbk_21trBlNAZegc.jpg?auto=webp&s=f69db3c79ea4fff018d45a3bd03578781c890173",
     "tip_type": 1
   },
   {
     "title": "Yazılı sınav tüyo 2",
     "description": "Yazılı sınav aciklama 2",
-    "image_url": "tuyo aciklama",
+    "tip_image_url": "https://external-preview.redd.it/5g6RMUt92-JV-VFWgRpavB4v2DATbk_21trBlNAZegc.jpg?auto=webp&s=f69db3c79ea4fff018d45a3bd03578781c890173",
     "tip_type": 1
   },
   {
     "title": "Yazılı sınav tüyo 3",
     "description": "Yazılı sınav aciklama 3",
-    "tip_image_url": "tuyo aciklama",
+    "tip_image_url": "https://external-preview.redd.it/5g6RMUt92-JV-VFWgRpavB4v2DATbk_21trBlNAZegc.jpg?auto=webp&s=f69db3c79ea4fff018d45a3bd03578781c890173",
     "tip_type": 1
   },
   {
     "title": "Direksiyon sınavi tüyo 1",
     "description": "Direksiyon sınav aciklama 1",
-    "tip_image_url": "tuyo aciklama",
+    "tip_image_url": "https://external-preview.redd.it/5g6RMUt92-JV-VFWgRpavB4v2DATbk_21trBlNAZegc.jpg?auto=webp&s=f69db3c79ea4fff018d45a3bd03578781c890173",
     "tip_type": 2
   },
   {
     "title": "Direksiyon sınavi tüyo 2",
     "description": "Direksiyon sınavi aciklama 2",
-    "tip_image_url": "tuyo aciklama",
+    "tip_image_url": "https://external-preview.redd.it/5g6RMUt92-JV-VFWgRpavB4v2DATbk_21trBlNAZegc.jpg?auto=webp&s=f69db3c79ea4fff018d45a3bd03578781c890173",
     "tip_type": 2
   },
   {
     "title": "Direksiyon sınavi tüyo 3",
     "description": "Direksiyon sınavi aciklama 3",
-    "tip_image_url": "tuyo aciklama",
+    "tip_image_url": "https://external-preview.redd.it/5g6RMUt92-JV-VFWgRpavB4v2DATbk_21trBlNAZegc.jpg?auto=webp&s=f69db3c79ea4fff018d45a3bd03578781c890173",
     "tip_type": 2
   }
 ]
