@@ -2,10 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
 import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.core.Resource
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTipTypes
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.*
 
 interface UsefulTopicsRepository {
 
@@ -24,8 +21,14 @@ interface UsefulTopicsRepository {
     /**
      * get all the exam tips from the UsefulTopicsDb
      * @param type of the tip
-     * @return list of ExamTips object wrapped in livedata
+     * @return list of ExamTips object wrapped in resource
      */
     suspend fun getExamTips(type: ExamTipTypes): Resource<List<ExamTip>>
+
+    /**
+     * get all the city plates from the UsefulTopicsDb
+     * @return list of CityPlate object wrapped in resource
+     */
+    suspend fun getCityPlates(): Resource<List<CityPlate>>
 
 }

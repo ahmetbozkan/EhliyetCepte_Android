@@ -57,6 +57,11 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
                 .actionLandingFragmentToExamTipsFragment(ExamTipTypes.DRIVING_EXAM_TIP)
             navigate(action)
         }
+
+        btnCityPlates.setOnClickListener {
+            val action = LandingFragmentDirections.actionLandingFragmentToCityPlatesFragment()
+            navigate(action)
+        }
     }
 }
 

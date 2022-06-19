@@ -4,10 +4,7 @@ import androidx.lifecycle.LiveData
 import com.ahmetbozkan.ehliyetcepte.core.Resource
 import com.ahmetbozkan.ehliyetcepte.core.Status
 import com.ahmetbozkan.ehliyetcepte.data.datasource.UsefulTopicsDataSource
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTipTypes
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.*
 import javax.inject.Inject
 
 class UsefulTopicsRepositoryImpl @Inject constructor(
@@ -25,7 +22,16 @@ class UsefulTopicsRepositoryImpl @Inject constructor(
     override suspend fun getExamTips(type: ExamTipTypes): Resource<List<ExamTip>> {
         val result = dataSource.getExamTips(type)
 
-        return when(result.status) {
+        return when (result.status) {
+            Status.SUCCESS -> Resource.success(result.data!!)
+            Status.ERROR -> Resource.error(null, result.error)
+        }
+    }
+
+    override suspend fun getCityPlates(): Resource<List<CityPlate>> {
+        val result = dataSource.getCityPlates()
+
+        return when (result.status) {
             Status.SUCCESS -> Resource.success(result.data!!)
             Status.ERROR -> Resource.error(null, result.error)
         }

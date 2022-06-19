@@ -2,6 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.db.usefultopics
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.CityPlate
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
@@ -47,4 +48,17 @@ interface UsefulTopicsDao {
     @Transaction
     @Query("SELECT * FROM exam_tips WHERE _type = :type")
     suspend fun getExamTips(type: Int): List<ExamTip>
+
+    /**
+     * CITY PLATES
+     */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(cityPlate: CityPlate)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(vararg cityPlate: CityPlate)
+
+    @Transaction
+    @Query("SELECT * FROM city_plates")
+    suspend fun getCityPlates(): List<CityPlate>
 }

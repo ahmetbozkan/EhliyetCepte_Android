@@ -1,6 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
 import android.content.Context
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.CityPlate
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
@@ -40,6 +41,16 @@ class UsefulTopicsDbCallbackRepositoryImpl @Inject constructor(
         return parseJsonDataToList(
             context,
             Constants.EXAM_TIPS_FILE_NAME,
+            typeToken
+        )
+    }
+
+    override fun getCityPlateEntities(): List<CityPlate> {
+        val typeToken = object : TypeToken<List<CityPlate>>() {}
+
+        return parseJsonDataToList(
+            context,
+            Constants.CITY_PLATES_FILE_NAME,
             typeToken
         )
     }

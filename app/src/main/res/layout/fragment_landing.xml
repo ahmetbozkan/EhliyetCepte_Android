@@ -48,5 +48,11 @@
             android:layout_height="wrap_content"
             android:text="tuyolar" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_city_plates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plakalar" />
+
     </LinearLayout>
 </layout>

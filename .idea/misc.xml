@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/dialog_fragment_multi_selection.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dialog_fragment_traffic_sign_detail.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/dialog_fragment_vehicle_gauge_detail.xml" value="0.2671171171171171" />
+        <entry key="app/src/main/res/layout/fragment_city_plates.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/fragment_countdown.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/fragment_display_question_result.xml" value="0.20684724030671298" />
         <entry key="app/src/main/res/layout/fragment_exam_list.xml" value="0.2065972222222222" />
@@ -23,6 +24,7 @@
         <entry key="app/src/main/res/layout/fragment_traffic_signs.xml" value="0.2671171171171171" />
         <entry key="app/src/main/res/layout/fragment_vehicle_gauges.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/layout_empty_questions.xml" value="0.274537037037037" />
+        <entry key="app/src/main/res/layout/row_city_plate_item.xml" value="0.25427350427350426" />
         <entry key="app/src/main/res/layout/row_exam_category_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/row_exam_item.xml" value="0.2065972222222222" />
         <entry key="app/src/main/res/layout/row_question_navigator_item.xml" value="0.27546296296296297" />

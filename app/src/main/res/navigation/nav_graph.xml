@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_landingFragment_to_examTipsFragment"
             app:destination="@id/examTipsFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_cityPlatesFragment"
+            app:destination="@id/cityPlatesFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -147,4 +150,9 @@
             android:name="type"
             app:argType="com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTipTypes" />
     </fragment>
+    <fragment
+        android:id="@+id/cityPlatesFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.cityplates.CityPlatesFragment"
+        android:label="fragment_city_plates"
+        tools:layout="@layout/fragment_city_plates" />
 </navigation>
