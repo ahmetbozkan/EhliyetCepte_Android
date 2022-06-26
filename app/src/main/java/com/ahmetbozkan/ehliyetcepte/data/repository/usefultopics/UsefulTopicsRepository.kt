@@ -31,4 +31,10 @@ interface UsefulTopicsRepository {
      */
     suspend fun getCityPlates(): Resource<List<CityPlate>>
 
+    /**
+     * get all the frequently asked questions from the UsefulTopicsDb
+     * @return list of FAQ object wrapped in resource
+     */
+    suspend fun getFrequentlyAskedQuestions(): Resource<List<FAQ>>
+
 }

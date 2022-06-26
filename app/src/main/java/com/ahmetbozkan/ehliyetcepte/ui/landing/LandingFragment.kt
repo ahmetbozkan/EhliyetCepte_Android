@@ -62,6 +62,11 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
             val action = LandingFragmentDirections.actionLandingFragmentToCityPlatesFragment()
             navigate(action)
         }
+
+        btnFaq.setOnClickListener {
+            val action = LandingFragmentDirections.actionLandingFragmentToFAQFragment()
+            navigate(action)
+        }
     }
 }
 

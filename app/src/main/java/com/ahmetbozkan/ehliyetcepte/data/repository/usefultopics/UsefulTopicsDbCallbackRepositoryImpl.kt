@@ -1,10 +1,7 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
 import android.content.Context
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.CityPlate
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.*
 import com.ahmetbozkan.ehliyetcepte.util.Constants
 import com.ahmetbozkan.ehliyetcepte.util.extension.parseJsonDataToList
 import com.google.gson.reflect.TypeToken
@@ -51,6 +48,16 @@ class UsefulTopicsDbCallbackRepositoryImpl @Inject constructor(
         return parseJsonDataToList(
             context,
             Constants.CITY_PLATES_FILE_NAME,
+            typeToken
+        )
+    }
+
+    override fun getFrequentlyAskedQuestions(): List<FAQ> {
+        val typeToken = object : TypeToken<List<FAQ>>() {}
+
+        return parseJsonDataToList(
+            context,
+            Constants.FREQUENTLY_ASKED_QUESTIONS_FILE_NAME,
             typeToken
         )
     }

@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_landingFragment_to_cityPlatesFragment"
             app:destination="@id/cityPlatesFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_FAQFragment"
+            app:destination="@id/FAQFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -155,4 +158,9 @@
         android:name="com.ahmetbozkan.ehliyetcepte.ui.cityplates.CityPlatesFragment"
         android:label="fragment_city_plates"
         tools:layout="@layout/fragment_city_plates" />
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.faq.FAQFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
 </navigation>

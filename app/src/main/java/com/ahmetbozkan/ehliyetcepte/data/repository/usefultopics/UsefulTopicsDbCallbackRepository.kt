@@ -1,9 +1,6 @@
 package com.ahmetbozkan.ehliyetcepte.data.repository.usefultopics
 
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.CityPlate
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.*
 
 interface UsefulTopicsDbCallbackRepository {
 
@@ -27,4 +24,8 @@ interface UsefulTopicsDbCallbackRepository {
      */
     fun getCityPlateEntities(): List<CityPlate>
 
+    /**
+     * get Frequently Asked Questions as FAQ entity class from faq.json file to insert Room db
+     */
+    fun getFrequentlyAskedQuestions(): List<FAQ>
 }

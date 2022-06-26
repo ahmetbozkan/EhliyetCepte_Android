@@ -162,8 +162,6 @@ aapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/trafficsigns/TrafficSignDetai
 Vapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/trafficsigns/TrafficSignsFragment.kt,6/b/6b55be6130becf7a705478fe18cd274e6f1fcfb5
 †
 Vapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/usefultopics/VehicleGauge.kt,6/e/6e87a850352c61a18b1d0f8536bbe71793b01cbd
-
-Oapp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/FileExtensions.kt,4/9/4975cf5a7b17cdc6279e65d9bd6cb098bfced854
 |
 Lapp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamHolder.kt,8/5/85752649b5a8564ac161c64b11599130e2a2bb02
 v

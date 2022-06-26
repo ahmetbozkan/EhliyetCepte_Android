@@ -25,5 +25,10 @@ class UsefulTopicsDataSource @Inject constructor(
             dao.getCityPlates()
         }
 
+    suspend fun getFrequentlyAskedQuestions(): Resource<List<FAQ>> =
+        handleOperation {
+            dao.getFrequentlyAskedQuestions()
+        }
+
 
 }

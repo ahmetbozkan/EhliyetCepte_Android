@@ -2,10 +2,7 @@ package com.ahmetbozkan.ehliyetcepte.data.db.usefultopics
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.CityPlate
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.ExamTip
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficSign
-import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.VehicleGauge
+import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.*
 
 @Dao
 interface UsefulTopicsDao {
@@ -61,4 +58,17 @@ interface UsefulTopicsDao {
     @Transaction
     @Query("SELECT * FROM city_plates")
     suspend fun getCityPlates(): List<CityPlate>
+
+    /**
+     * FREQUENTLY ASKED QUESTIONS
+     */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(faq: FAQ)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(vararg faq: FAQ)
+
+    @Transaction
+    @Query("SELECT * FROM frequently_asked_questions")
+    suspend fun getFrequentlyAskedQuestions(): List<FAQ>
 }

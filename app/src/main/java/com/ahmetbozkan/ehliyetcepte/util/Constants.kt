@@ -6,6 +6,7 @@ object Constants {
     const val TRAFFIC_SIGNS_FILE_NAME = "traffic_signs.json"
     const val EXAM_TIPS_FILE_NAME = "exam_tips.json"
     const val CITY_PLATES_FILE_NAME = "city_plates.json"
+    const val FREQUENTLY_ASKED_QUESTIONS_FILE_NAME = "faq.json"
 
     const val HOUR_AS_MINUTE_MILLIS = 3600000L
     const val MINUTE_AS_SECOND_MILLIS = 60000L

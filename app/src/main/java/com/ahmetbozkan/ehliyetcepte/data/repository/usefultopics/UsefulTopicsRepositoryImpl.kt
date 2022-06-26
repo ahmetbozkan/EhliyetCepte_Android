@@ -37,5 +37,14 @@ class UsefulTopicsRepositoryImpl @Inject constructor(
         }
     }
 
+    override suspend fun getFrequentlyAskedQuestions(): Resource<List<FAQ>> {
+        val result = dataSource.getFrequentlyAskedQuestions()
+
+        return when (result.status) {
+            Status.SUCCESS -> Resource.success(result.data!!)
+            Status.ERROR -> Resource.error(null, result.error)
+        }
+    }
+
 
 }
