@@ -4,15 +4,15 @@ import android.os.Bundle
 import androidx.fragment.app.viewModels
 import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
-import com.ahmetbozkan.ehliyetcepte.databinding.FragmentDrivingLicenceClassesBinding
+import com.ahmetbozkan.ehliyetcepte.databinding.FragmentSpeedLimitsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class DrivingLicenceClassesFragment @Inject constructor() :
-    BaseFragment<FragmentDrivingLicenceClassesBinding, DrivingLicenceInfoViewModel>() {
+class SpeedLimitsFragment @Inject constructor() :
+    BaseFragment<FragmentSpeedLimitsBinding, DrivingLicenceInfoViewModel>() {
 
-    override fun getLayoutId(): Int = R.layout.fragment_driving_licence_classes
+    override fun getLayoutId(): Int = R.layout.fragment_speed_limits
 
     override val viewModel: DrivingLicenceInfoViewModel by viewModels()
 

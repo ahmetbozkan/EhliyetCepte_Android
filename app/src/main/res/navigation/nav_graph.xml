@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_landingFragment_to_drivingLicenceClassesFragment"
             app:destination="@id/drivingLicenceClassesFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_speedLimitsFragment"
+            app:destination="@id/speedLimitsFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -171,4 +174,9 @@
         android:name="com.ahmetbozkan.ehliyetcepte.ui.licenceinfo.DrivingLicenceClassesFragment"
         android:label="fragment_driving_licence_classes"
         tools:layout="@layout/fragment_driving_licence_classes" />
+    <fragment
+        android:id="@+id/speedLimitsFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.licenceinfo.SpeedLimitsFragment"
+        android:label="fragment_speed_limits"
+        tools:layout="@layout/fragment_speed_limits" />
 </navigation>
