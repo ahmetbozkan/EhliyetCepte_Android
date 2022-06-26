@@ -67,6 +67,12 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
             val action = LandingFragmentDirections.actionLandingFragmentToFAQFragment()
             navigate(action)
         }
+
+        btnDrivingLicences.setOnClickListener {
+            val action = LandingFragmentDirections
+                .actionLandingFragmentToDrivingLicenceClassesFragment()
+            navigate(action)
+        }
     }
 }
 

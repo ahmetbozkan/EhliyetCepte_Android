@@ -49,10 +49,6 @@ Napp/src/main/java/com/ahmetbozkan/ehliyetcepte/util/extension/ListExtension.kt
 Papp/src/main/java/com/ahmetbozkan/ehliyetcepte/data/model/exam/ExamCategories.kt,d/e/deae0efad6c6f883f6b6dad4afeb808785a03ebe
 …
 Uapp/src/main/java/com/ahmetbozkan/ehliyetcepte/ui/common/examcategory/ExamCategory.kt,5/4/54723e98b57f85fe99023135cc4535392a5fb30f
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
-@
-app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
 ‚

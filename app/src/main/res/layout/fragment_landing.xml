@@ -60,5 +60,11 @@
             android:layout_height="wrap_content"
             android:text="sıkça sorulan sorular" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_driving_licences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ehliyet siniflari" />
+
     </LinearLayout>
 </layout>

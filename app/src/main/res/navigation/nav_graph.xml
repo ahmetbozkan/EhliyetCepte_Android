@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_landingFragment_to_FAQFragment"
             app:destination="@id/FAQFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_drivingLicenceClassesFragment"
+            app:destination="@id/drivingLicenceClassesFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -163,4 +166,9 @@
         android:name="com.ahmetbozkan.ehliyetcepte.ui.faq.FAQFragment"
         android:label="fragment_faq"
         tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/drivingLicenceClassesFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.licenceinfo.DrivingLicenceClassesFragment"
+        android:label="fragment_driving_licence_classes"
+        tools:layout="@layout/fragment_driving_licence_classes" />
 </navigation>
