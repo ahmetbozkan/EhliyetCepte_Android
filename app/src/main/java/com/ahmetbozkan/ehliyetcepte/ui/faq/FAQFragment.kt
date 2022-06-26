@@ -6,8 +6,8 @@ import com.ahmetbozkan.ehliyetcepte.R
 import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.FAQ
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentFaqBinding
-import com.ahmetbozkan.ehliyetcepte.util.extension.showToast
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class FAQFragment : BaseFragment<FragmentFaqBinding, FAQViewModel>() {
@@ -15,9 +15,14 @@ class FAQFragment : BaseFragment<FragmentFaqBinding, FAQViewModel>() {
 
     override val viewModel: FAQViewModel by viewModels()
 
+    @Inject
+    lateinit var faqAdapter: FAQAdapter
+
     override fun initialize(savedInstanceState: Bundle?) {
 
         subscribeToViewModel()
+
+        setFAQAdapter()
 
     }
 
@@ -26,6 +31,11 @@ class FAQFragment : BaseFragment<FragmentFaqBinding, FAQViewModel>() {
     }
 
     private fun observeFAQs(list: List<FAQ>) {
-        requireContext().showToast(list.size.toString())
+        faqAdapter.submitList(list)
+    }
+
+    private fun setFAQAdapter() = with(binding.rcvFaq) {
+        hasFixedSize()
+        adapter = faqAdapter
     }
 }
