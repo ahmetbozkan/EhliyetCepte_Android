@@ -72,5 +72,11 @@
             android:layout_height="wrap_content"
             android:text="hiz sinirlari" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_traffic_fines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="trafik cezalari" />
+
     </LinearLayout>
 </layout>

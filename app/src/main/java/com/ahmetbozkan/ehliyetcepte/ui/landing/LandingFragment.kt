@@ -78,6 +78,11 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
             val action = LandingFragmentDirections.actionLandingFragmentToSpeedLimitsFragment()
             navigate(action)
         }
+
+        btnTrafficFines.setOnClickListener {
+            val action = LandingFragmentDirections.actionLandingFragmentToTrafficFinesFragment()
+            navigate(action)
+        }
     }
 }
 

@@ -7,6 +7,7 @@ import com.ahmetbozkan.ehliyetcepte.base.BaseFragment
 import com.ahmetbozkan.ehliyetcepte.data.model.usefultopics.TrafficFine
 import com.ahmetbozkan.ehliyetcepte.databinding.FragmentTrafficFinesBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class TrafficFinesFragment : BaseFragment<FragmentTrafficFinesBinding, TrafficFinesViewModel>() {
@@ -15,8 +16,13 @@ class TrafficFinesFragment : BaseFragment<FragmentTrafficFinesBinding, TrafficFi
 
     override val viewModel: TrafficFinesViewModel by viewModels()
 
+    @Inject
+    lateinit var trafficFinesAdapter: TrafficFinesAdapter
+
     override fun initialize(savedInstanceState: Bundle?) {
         subscribeToViewModel()
+
+        setTrafficFinesAdapter()
     }
 
     private fun subscribeToViewModel() {
@@ -24,6 +30,11 @@ class TrafficFinesFragment : BaseFragment<FragmentTrafficFinesBinding, TrafficFi
     }
 
     private fun observeTrafficFines(list: List<TrafficFine>) {
+        trafficFinesAdapter.submitList(list)
+    }
 
+    private fun setTrafficFinesAdapter() = with(binding.rcvTrafficFines) {
+        hasFixedSize()
+        adapter = trafficFinesAdapter
     }
 }

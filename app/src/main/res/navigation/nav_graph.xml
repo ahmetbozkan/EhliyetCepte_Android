@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_landingFragment_to_speedLimitsFragment"
             app:destination="@id/speedLimitsFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_trafficFinesFragment"
+            app:destination="@id/trafficFinesFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -179,4 +182,9 @@
         android:name="com.ahmetbozkan.ehliyetcepte.ui.licenceinfo.SpeedLimitsFragment"
         android:label="fragment_speed_limits"
         tools:layout="@layout/fragment_speed_limits" />
+    <fragment
+        android:id="@+id/trafficFinesFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.trafficfines.TrafficFinesFragment"
+        android:label="fragment_traffic_fines"
+        tools:layout="@layout/fragment_traffic_fines" />
 </navigation>
