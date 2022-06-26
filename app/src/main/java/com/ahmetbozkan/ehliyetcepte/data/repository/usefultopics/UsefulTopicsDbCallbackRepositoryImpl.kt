@@ -62,5 +62,15 @@ class UsefulTopicsDbCallbackRepositoryImpl @Inject constructor(
         )
     }
 
+    override fun getTrafficFines(): List<TrafficFine> {
+        val typeToken = object : TypeToken<List<TrafficFine>>() {}
+
+        return parseJsonDataToList(
+            context,
+            Constants.TRAFFIC_FINES_FILE_NAME,
+            typeToken
+        )
+    }
+
 
 }

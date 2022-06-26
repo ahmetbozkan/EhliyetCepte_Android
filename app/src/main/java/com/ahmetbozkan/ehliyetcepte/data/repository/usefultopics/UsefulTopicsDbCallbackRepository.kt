@@ -28,4 +28,9 @@ interface UsefulTopicsDbCallbackRepository {
      * get Frequently Asked Questions as FAQ entity class from faq.json file to insert Room db
      */
     fun getFrequentlyAskedQuestions(): List<FAQ>
+
+    /**
+     * get Traffic Fines as TrafficFine entity class from traffic_fines.json file to insert Room db
+     */
+    fun getTrafficFines(): List<TrafficFine>
 }

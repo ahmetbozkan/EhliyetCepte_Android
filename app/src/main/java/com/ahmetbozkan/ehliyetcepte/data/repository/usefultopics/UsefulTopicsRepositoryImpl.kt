@@ -46,5 +46,14 @@ class UsefulTopicsRepositoryImpl @Inject constructor(
         }
     }
 
+    override suspend fun getTrafficFines(): Resource<List<TrafficFine>> {
+        val result = dataSource.getTrafficFines()
+
+        return when (result.status) {
+            Status.SUCCESS -> Resource.success(result.data!!)
+            Status.ERROR -> Resource.error(null, result.error)
+        }
+    }
+
 
 }

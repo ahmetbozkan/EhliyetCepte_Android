@@ -37,4 +37,10 @@ interface UsefulTopicsRepository {
      */
     suspend fun getFrequentlyAskedQuestions(): Resource<List<FAQ>>
 
+    /**
+     * get all the traffic fines from the TrafficFinesDb
+     * @return list of TrafficFine object wrapped in resource
+     */
+    suspend fun getTrafficFines(): Resource<List<TrafficFine>>
+
 }

@@ -30,5 +30,10 @@ class UsefulTopicsDataSource @Inject constructor(
             dao.getFrequentlyAskedQuestions()
         }
 
+    suspend fun getTrafficFines(): Resource<List<TrafficFine>> =
+        handleOperation {
+            dao.getTrafficFines()
+        }
+
 
 }

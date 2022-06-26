@@ -71,4 +71,17 @@ interface UsefulTopicsDao {
     @Transaction
     @Query("SELECT * FROM frequently_asked_questions")
     suspend fun getFrequentlyAskedQuestions(): List<FAQ>
+
+    /**
+     * TRAFFIC FINES (Trafik Cezaları)
+     */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(trafficFine: TrafficFine)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(vararg trafficFine: TrafficFine)
+
+    @Transaction
+    @Query("SELECT * FROM traffic_fines")
+    suspend fun getTrafficFines(): List<TrafficFine>
 }
