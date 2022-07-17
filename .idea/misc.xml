@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/ic_info.xml" value="0.1625" />
         <entry key="app/src/main/res/drawable/ic_success.xml" value="0.1725" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2065972222222222" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/dialog_fragment_multi_selection.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dialog_fragment_traffic_sign_detail.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/dialog_fragment_vehicle_gauge_detail.xml" value="0.2671171171171171" />
@@ -23,11 +24,12 @@
         <entry key="app/src/main/res/layout/fragment_landing.xml" value="0.134979248046875" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.24641833810888253" />
         <entry key="app/src/main/res/layout/fragment_scoreboard.xml" value="0.27546296296296297" />
-        <entry key="app/src/main/res/layout/fragment_solve_exam.xml" value="0.2092010498046875" />
+        <entry key="app/src/main/res/layout/fragment_solve_exam.xml" value="0.38344268798828124" />
         <entry key="app/src/main/res/layout/fragment_solve_wrong_questions.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/fragment_speed_limits.xml" value="0.268018018018018" />
         <entry key="app/src/main/res/layout/fragment_traffic_fines.xml" value="0.2644444444444444" />
         <entry key="app/src/main/res/layout/fragment_traffic_signs.xml" value="0.2671171171171171" />
+        <entry key="app/src/main/res/layout/fragment_user_feedback.xml" value="0.2671171171171171" />
         <entry key="app/src/main/res/layout/fragment_vehicle_gauges.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/layout_empty_questions.xml" value="0.274537037037037" />
         <entry key="app/src/main/res/layout/row_city_plate_item.xml" value="0.25427350427350426" />

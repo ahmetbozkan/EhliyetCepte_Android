@@ -83,6 +83,11 @@ class LandingFragment : BaseFragment<FragmentLandingBinding, LandingViewModel>()
             val action = LandingFragmentDirections.actionLandingFragmentToTrafficFinesFragment()
             navigate(action)
         }
+
+        btnUserFeedback.setOnClickListener {
+            val action = LandingFragmentDirections.actionLandingFragmentToUserFeedbackFragment()
+            navigate(action)
+        }
     }
 }
 

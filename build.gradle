@@ -105,7 +105,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$versions.core.gradle"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.core.kotlin"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.ext.navigation"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$versions.ext.dagger_hilt"
     }

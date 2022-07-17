@@ -1,6 +1,8 @@
 package com.ahmetbozkan.ehliyetcepte.util
 
 object Constants {
+    const val DEVELOPER_EMAIL = "ahmetbozkanx@gmail.com"
+
     const val EXAMS_FILE_NAME = "exams.json"
     const val VEHICLE_GAUGES_FILE_NAME = "vehicle_gauges.json"
     const val TRAFFIC_SIGNS_FILE_NAME = "traffic_signs.json"

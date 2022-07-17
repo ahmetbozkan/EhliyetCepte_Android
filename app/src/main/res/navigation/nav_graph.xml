@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_landingFragment_to_trafficFinesFragment"
             app:destination="@id/trafficFinesFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_userFeedbackFragment"
+            app:destination="@id/userFeedbackFragment" />
     </fragment>
     <fragment
         android:id="@+id/examListFragment"
@@ -187,4 +190,9 @@
         android:name="com.ahmetbozkan.ehliyetcepte.ui.trafficfines.TrafficFinesFragment"
         android:label="fragment_traffic_fines"
         tools:layout="@layout/fragment_traffic_fines" />
+    <fragment
+        android:id="@+id/userFeedbackFragment"
+        android:name="com.ahmetbozkan.ehliyetcepte.ui.userfeedback.UserFeedbackFragment"
+        android:label="fragment_user_feedback"
+        tools:layout="@layout/fragment_user_feedback" />
 </navigation>
